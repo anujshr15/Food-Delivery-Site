@@ -14,10 +14,21 @@ nav {
 body {
 	margin:0;
 }
-nav>ul>li {
+nav li:hover {
+	/*font-size: 1.2em;*/
+	background: white;
+	border-radius:40px;
+	color: black;
+
+}
+
+nav ul li {
 	padding: 20px;
 	display: inline;
 	margin-right: 25px;
 	color: white;
-
+	margin-top: 5px;
 }
+
+
+
