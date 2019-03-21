@@ -2,12 +2,25 @@
 <html>
 <head>
 	<title>COMPLAINTS</title>
-	<style> 
+	<style>
+	.button {
+  background-color: lightgreen;
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 24px;
+}
 header {
   background-color: #666;
-  padding: 10px;
+  padding: 6px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
 }
 select {
@@ -18,16 +31,26 @@ select {
   background-color: #f1f1f1;
 }
 form{
-	padding: 40px 0;
+	padding: 20px 0;
 }
+footer {
+  background-color:black;
+  padding: 1px 0;
+  text-align: center;
+  color: yellow;
+  font-size: 18px;
+}
+
 </style>
 </head>
 <body style="background-color:dodgerblue;">
 	<header>
-  <h2>COMPLAINT REDRESSAL</h2>
+		<img src="C:\Users\HP\Desktop\manitlogo.png" style="width: 100px;height: 100x;float: left;padding: 5px 20px;">
+  <h2>COMPLAINT REDRESSAL </h2>
+  <H4>Maulana Azad National Institute of Technology,Bhopal</H4>
 </header>
 <form  action=" " target="_blank" style="text-align: center;">
-	<h4 style="text-align: center;">Select Complaint Category</h4>
+	<h3 style="text-align: center;">Select Complaint Category:</h3>
 
 <select name="Complaint" style="align-self: center;">
 <option>MESS</option>
@@ -38,13 +61,21 @@ form{
 </select>
 <br>
 
-<h4>Write a brief description of your complaint:</h4><br>
-<textarea name="message" rows="15" cols="75">
+<h3>Write a brief description of your complaint:</h3><br>
+<textarea name="message" rows="12" cols="75">
 </textarea>
 <br><br>
 
-<input type="submit">
-<input type="reset">
+<input type="submit" class="button">
+<input type="reset" class="button">
+
 </form>
+<br>
+<br>
+<footer>
+	<pre>
+ Link Road No 3,Near Kali Mata Mandir,Bhopal 462003 |  <a href="http://www.manit.ac.in/" style="color: yellow;">www.manit.ac.in</a>  | Telephone: +91 755 4051000,4052000,2670900 | Fax: +91-755 2670562
+</pre>
+</footer>
 </body>
 </html>
