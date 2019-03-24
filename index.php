@@ -1,3 +1,6 @@
+<?php 
+session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,18 +16,24 @@
 		<li>Room Allotment</li>
 		<li>Review a Room</li>
 		<li>Complaints</li>
+		<?php if(isset($_SESSION['username'])) { ?>
+		<li><?php echo "".$_SESSION['username'] ?> <a href="logout.php">Logout</a></li>
+		<?php } else { ?> <li><a href="login.php">Login </a></li> <?php } ?>
 	</ul>
 </nav>
 <div>
 	<img src="hostel_1.jpg" width="100%" height="350px">
 <div>
 <marquee scrollamount="10" direction="right">Welcome to MANIT Hostel Management Site</marquee>
-<footer>@Copyright </footer>
-<script>
+<!-- <footer>@Copyright 2019</footer> -->
+<footer>
+	Copyright 2019
+</footer>
+<!-- <script>
 		var par=document.querySelector("footer");
 		var dt=new Date();
 		par.innerText+=" "+(dt.getYear()+1900).toString();
-	</script>
+	</script> -->
 
 
 </body>

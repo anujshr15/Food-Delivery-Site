@@ -1,4 +1,4 @@
-nav> ul {
+nav ul {
 	list-style: none;
 	text-align: center;
 	margin-top:0;
@@ -31,4 +31,9 @@ nav ul li {
 }
 
 
+footer h2 {
+	text-decoration: none;
+	pointer-events: none;
+	color:black;
+}
 
