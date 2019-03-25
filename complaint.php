@@ -13,6 +13,9 @@
 	<title>COMPLAINTS</title>
 
 	<style>
+#grad1 {
+  background-image: linear-gradient(to right,rgba(255,0,0,0),rgba(0,0,255,0.3),rgba(255,0,0,0));
+}
 
 .button 
 {
@@ -30,11 +33,11 @@
 }
 header 
 {
-  background-color: #666;
+  background-color: black;
   padding: 6px;
   text-align: center;
   font-size: 18px;
-  color: white;
+  color:yellow;
 }
 select 
 {
@@ -62,7 +65,7 @@ footer
 
 </head>
 
-<body style="background-color:dodgerblue;">
+<body id="grad1">
 
 <header>
   <img src="C:\Users\HP\Desktop\manitlogo.png" style="width: 100px;height: 100x;float: left;padding: 5px 20px;">
