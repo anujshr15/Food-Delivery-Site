@@ -1,5 +1,6 @@
 <?php 
-  if(!isset($_SESSION['sid']))
+  session_start();
+  if(isset($_SESSION['sid'])==0)
   {
     header("Location: login.php");
   }

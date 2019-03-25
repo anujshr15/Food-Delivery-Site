@@ -12,10 +12,12 @@ session_start();
 <nav>
 	<span style="color:white;">HOSTEL MANAGEMENT SYSTEM V2.0</span>
 	<ul>
+		<?php if(isset($_SESSION['sid'])) {?>
 		<li>Dashboard</li>
 		<li>Room Allotment</li>
 		<li>Review a Room</li>
-		<li>Complaints</li>
+		<li><a href="complaint.php">Complaints</a></li>
+	<?php } ?>
 		<?php if(isset($_SESSION['sid'])) { ?>
 		<li><?php echo "".$_SESSION['sid'] ?> <a href="logout.php">Logout</a></li>
 		<?php } else { ?> <li><a href="login.php">Login </a></li> <?php } ?>
