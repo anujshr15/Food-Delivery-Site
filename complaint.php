@@ -1,4 +1,9 @@
-
+<?php 
+  if(!isset($_SESSION['sid']))
+  {
+    header("Location: login.php");
+  }
+ ?>
 
 
 <!DOCTYPE html>
