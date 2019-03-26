@@ -92,7 +92,7 @@ body
 
 </header>
 
-<form  action=""  style="text-align: center;" method="POST">
+<form  action="room_allot_handler.php"  style="text-align: center;" method="POST">
 	
 <h3 >SELECT HOSTEL NO:</h3>
 <input type="number" name="hostelno" min="1" max="10" style="width: 22%;height: 25px;border-radius: 10px;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;">
