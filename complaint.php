@@ -60,7 +60,10 @@ footer
   color: yellow;
   font-size: 18px;
 }
-
+body
+{
+  margin:0;
+}
 </style>
 
 </head>
