@@ -10,11 +10,8 @@ $phone=$_POST['phone'];
 $con=mysqli_connect('localhost','root');
 if($con){
 mysqli_select_db($con,"Hostel");
-$q="insert into users values($sid,'$password')";
-$q1="insert into student values($sid,'$name',$phone)";
-
-$res=mysqli_query($con,$q);
-$res1=mysqli_query($con,$q1);
+$q="insert into users values($sid,'$password');insert into student(sid,name,phone) values($sid,'$name',$phone);";
+$res=mysqli_multi_query($con,$q);
 if($res)
 {
 	echo "response received";
@@ -27,5 +24,6 @@ else {
 }
 }
 else echo "connection not made";
+
 mysqli_close($con);
  ?>

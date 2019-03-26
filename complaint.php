@@ -83,11 +83,11 @@ body
 
 <h3>Select Complaint Category:</h3>
 <select name="Complaint" style="width: 38%;">
-<option>MESS</option>
-<option>ROOM</option>
-<option>ELECTRICITY</option>
-<option>WATER AND SANITATION</option>
-<option>OTHERS</option>
+<option value="MESS">MESS</option>
+<option value="ROOM">ROOM</option>
+<option value="ELECTRICITY">ELECTRICITY</option>
+<option value="WATER AND SANITATION">WATER AND SANITATION</option>
+<option value="OTHERS">OTHERS</option>
 </select>
 	
 <br>
