@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link type="text/css" rel="stylesheet" href="nav.css">
 	<title>COMPLAINTS</title>
 
 	<style>
@@ -38,6 +39,7 @@ header
   text-align: center;
   font-size: 18px;
   color:yellow;
+  height: 148px;
 }
 select 
 {
@@ -71,9 +73,23 @@ body
 <body id="grad1">
 
 <header>
-  <img src="manitlogo.png" style="width: 100px;height: 100x;float: left;padding: 5px 20px;">
+  <img src="manitlogo.png" style="width: 120px;height: 120x;float: left;padding: 10px 20px;">
   <h2>GRIEVANCE REDRESSAL PORTAL </h2>
-  <H4>Maulana Azad National Institute of Technology, Bhopal</H4>
+  <nav>
+  <span style="color:white;"><a href="index.php"></a></span>
+  <ul>
+    <?php if(isset($_SESSION['sid'])) {?>
+    <li>Dashboard</li>
+    <li>Room Allotment</li>
+    <li>Review a Room</li>
+    <li><a  href="complaint.php">Complaints</a></li>
+  <?php } ?>
+    <?php if(isset($_SESSION['sid'])) { ?>
+    <li><?php echo "".$_SESSION['sid'] ?> <a href="logout.php">Logout</a></li>
+    <?php } else { ?><li><a  href="login.php">Login </a></li><li><a href="register.php">Register </a></li> <?php } ?>
+  </ul>
+</nav>
+
 </header>
 
 <form  action=" "  style="text-align: center;">
