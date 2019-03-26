@@ -4,6 +4,11 @@ if(!isset($_SESSION['sid']))
   {
   	header("Location: index.php");
   }
+elseif(strlen($_POST['message'])==0)
+{
+	header("Location: complaint.php");
+}
+else{
 $id=$_SESSION['sid'];
 $hostelno=$_POST['hostelno'];
 $category=$_POST['Complaint'];
@@ -23,5 +28,6 @@ mysqli_close($con);
 if($final==1)
 {
 	header("Location: index.php");
+}
 }
  ?>
