@@ -4,7 +4,7 @@
 	$password=$_POST['password'];
     $con=mysqli_connect('localhost','root');
     mysqli_select_db($con,"Hostel");
-    $q="select * from student where sid='$sid' and password='$password'";
+    $q="select * from users where sid='$sid' and password='$password'";
     $result=mysqli_query($con,$q);
     $num=mysqli_num_rows($result);
     if($num==1)

@@ -92,18 +92,18 @@ body
 
 </header>
 
-<form  action=" "  style="text-align: center;">
+<form  action="complaint_handler.php"  style="text-align: center;" method="POST">
 	
 <h3 >Enter Hostel Number:</h3>
 <input type="number" name="hostelno" min="1" max="10" style="width: 36.5%;height: 25px;border-radius: 10px;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;">
 
 <h3>Select Complaint Category:</h3>
 <select name="Complaint" style="width: 38%;">
-<option>MESS</option>
-<option>ROOM</option>
-<option>ELECTRICITY</option>
-<option>WATER AND SANITATION</option>
-<option>OTHERS</option>
+<option value="MESS">MESS</option>
+<option value="ROOM">ROOM</option>
+<option value="ELECTRICITY">ELECTRICITY</option>
+<option value="WATER AND SANITATION">WATER AND SANITATION</option>
+<option value="OTHERS">OTHERS</option>
 </select>
 	
 <br>
