@@ -1,6 +1,7 @@
 a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
+   
 }
 
 nav ul {
@@ -35,7 +36,7 @@ nav ul li {
 	padding: 20px;
 	display: inline;
 	margin-right: 25px;
-	/*color: white;*/
+	color: white;
 	margin-top: 5px;
 }
 
