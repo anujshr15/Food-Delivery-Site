@@ -68,7 +68,7 @@ footer
 <body id="grad1">
 
 <header>
-  <img src="C:\Users\HP\Desktop\manitlogo.png" style="width: 100px;height: 100x;float: left;padding: 5px 20px;">
+  <img src="manitlogo.png" style="width: 100px;height: 100x;float: left;padding: 5px 20px;">
   <h2>GRIEVANCE REDRESSAL PORTAL </h2>
   <H4>Maulana Azad National Institute of Technology, Bhopal</H4>
 </header>
