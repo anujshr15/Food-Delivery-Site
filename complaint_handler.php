@@ -15,9 +15,9 @@ $category=$_POST['Complaint'];
 $description=$_POST['message'];
 $con=mysqli_connect('localhost','root');
 mysqli_select_db($con,'Hostel');
-$resid=mysqli_query($con,"select cid from complaints;");
-$num=mysqli_num_rows($resid);
-$nextid=$num+1;
+$resid=mysqli_query($con,"select max(cid) from complaints;");
+$ar=mysqli_fetch_array($resid);
+$nextid=$ar[0]+1;
 $q="insert into complaints(cid,category,description,hostelno) values ($nextid,'$category','$description','$hostelno');";
 
 mysqli_query($con,$q);
