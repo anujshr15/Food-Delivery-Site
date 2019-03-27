@@ -6,35 +6,11 @@ session_start();
 <head>
 	<title>MANIT HOSTEL</title>
 	<link type="text/css" rel="stylesheet" href="index.css">
-	<style type="text/css">
-		nav a {
-			color:white;
-		}
+	<link rel="stylesheet" type="text/css" href="nav.css">
 
-		nav li {
-			color:white;
-		}
-
-		
-
-
-	</style>
 </head>
 <body>
-<nav>
-	<span style="color:white;"><a href="index.php">HOSTEL MANAGEMENT SYSTEM V2.0</a></span>
-	<ul>
-		<?php if(isset($_SESSION['sid'])) {?>
-		<li>Dashboard</li>
-		<li>Room Allotment</li>
-		<li>Review a Room</li>
-		<li><a  href="complaint.php">Complaints</a></li>
-	<?php } ?>
-		<?php if(isset($_SESSION['sid'])) { ?>
-		<li><?php echo "".$_SESSION['sid'] ?> <a href="logout.php">Logout</a></li>
-		<?php } else { ?><li><a  href="login.php">Login </a></li><li><a href="register.php">Register </a></li> <?php } ?>
-	</ul>
-</nav>
+<?php include 'navbar.php' ?>
 <div>
 	<img src="hostel_1.jpg" width="100%" height="350px">
 <div>

@@ -19,7 +19,7 @@ fieldset {align-content: center;
 </style>
 </head>
 <body>
-
+	<?php include 'navbar.php' ?>
 	<FORM action="validation.php" method="post" style="margin: auto;width: 30%;text-align: center;height: 250px;"><br><br><br><br><br>
 		<fieldset>
 			<legend style="text-align: center">LOGIN PANEL</legend>
