@@ -11,8 +11,10 @@
 <html>
 <head>
 	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="nav.css">
 </head>
 <body>
+	<?php include 'navbar.php' ?>
 	<form method="POST" action="reg.php">
 		Scholar Id: <input type="number" name="sid" placeholder="Enter Scholar Id">
 		Password: <input type="password" name="password">

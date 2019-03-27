@@ -4,7 +4,7 @@
 	<ul>
 		<?php if(isset($_SESSION['sid'])) {?>
 		<li>Dashboard</li>
-		<li>Room Allotment</li>
+		<li><a href="room_allot.php">Room Allotment</a></li>
 		<li>Review a Room</li>
 		<li><a  href="complaint.php">Complaints</a></li>
 	<?php } ?>

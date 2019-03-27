@@ -1,5 +1,5 @@
 
-ul {
+nav ul {
 	list-style: none;
 	text-align: center;
 	margin-top:0;
@@ -7,7 +7,7 @@ ul {
 	display: inline-block;
 }
 
-a {
+nav a {
 	text-decoration: none;
 }
 
@@ -17,13 +17,13 @@ nav {
 }
 
 
-a:link, a:visited {
+nav a:link, nav a:visited {
 	color: white;
 	
 
 }
 
-a:active {
+nav a:active {
 	color:yellow;
 }
 
@@ -31,7 +31,7 @@ body {
 	margin:0;
 }
 
-ul li {
+nav ul li {
 	padding: 20px;
 	display: inline;
 	margin-right: 25px;

@@ -67,7 +67,7 @@ body
   margin:0;
 }
 </style>
-
+<link rel="stylesheet" type="text/css" href="nav.css">
 </head>
 
 <body id="grad1">
@@ -75,20 +75,7 @@ body
 <header>
   <img src="manitlogo.png" style="width: 120px;height: 120x;float: left;padding: 10px 20px;">
   <h2>GRIEVANCE REDRESSAL PORTAL </h2>
-  <nav>
-  <span style="color:white;"><a href="index.php"></a></span>
-  <ul>
-    <?php if(isset($_SESSION['sid'])) {?>
-    <li>Dashboard</li>
-    <li>Room Allotment</li>
-    <li>Review a Room</li>
-    <li><a  href="complaint.php">Complaints</a></li>
-  <?php } ?>
-    <?php if(isset($_SESSION['sid'])) { ?>
-    <li><?php echo "".$_SESSION['sid'] ?> <a href="logout.php">Logout</a></li>
-    <?php } else { ?><li><a  href="login.php">Login </a></li><li><a href="register.php">Register </a></li> <?php } ?>
-  </ul>
-</nav>
+  <?php include 'navbar.php' ?>
 
 </header>
 

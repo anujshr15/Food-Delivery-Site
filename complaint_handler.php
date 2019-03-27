@@ -16,18 +16,19 @@ $description=$_POST['message'];
 $con=mysqli_connect('localhost','root');
 mysqli_select_db($con,'Hostel');
 $resid=mysqli_query($con,"select max(cid) from complaints;");
-$ar=mysqli_fetch_array($resid);
-$nextid=$ar[0]+1;
+$row=mysqli_fetch_row($resid);
+$nextid=(int)$row[0]+1;
+echo $nextid;
 $q="insert into complaints(cid,category,description,hostelno) values ($nextid,'$category','$description','$hostelno');";
 
-mysqli_query($con,$q);
-
+$done=mysqli_query($con,$q);
+if($done){
 $q2="insert into writes_com(sid,cid) values($id,$nextid)";
 $final=mysqli_query($con,$q2);
-mysqli_close($con);
-if($final==1)
-{
-	header("Location: index.php");
 }
+mysqli_close($con);
+
+header("Location: index.php");
+
 }
  ?>
