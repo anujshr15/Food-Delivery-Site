@@ -12,14 +12,27 @@
 <head>
 	<title>Register</title>
 	<link rel="stylesheet" type="text/css" href="nav.css">
+<style >
+div
+{
+	margin: auto;
+	width: 48%;
+}
+form
+{
+	text-align: center;
+	font-family: verdana;
+}
+</style>
 </head>
 <body>
 	<?php include 'navbar.php' ?>
+	<div>
 	<form method="POST" action="reg.php">
-		Scholar Id: <input type="number" name="sid" placeholder="Enter Scholar Id">
-		Password: <input type="password" name="password">
-		Name: <input type="text" name="name">
-		Phone: <input type="number" name="phone">
+		<h3>Scholar No.</h3> <input type="number" name="sid" placeholder="Enter Scholar Id">
+		<h3>Password</h3><input type="password" name="password">
+		<h3>Name</h3><input type="text" name="name">
+		<h3>Phone</h3><input type="number" name="phone"><br><br>
 		<!-- Hostel: <select name="hostelno">
 			<?php 
 			for($i=1;$i<=10;$i++)
@@ -29,6 +42,6 @@
 		Room No: <input type="number" name="roomno" min=1 max=50> -->
 		<input type="submit" value="Register">
 		</form>
-
+</div>
 </body>
 </html>
