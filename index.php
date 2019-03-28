@@ -11,7 +11,7 @@ session_start();
 </head>
 <body id="grad1">
 <?php include 'navbar.php' ?>
-
+<marquee scrollamount="10" direction="right">Welcome to MANIT Hostel Management Site</marquee>
 
 
 <div class="slideshow-container" style="margin-top: 50px;">
@@ -85,7 +85,7 @@ function showSlides(n) {
 
 
 
-<marquee scrollamount="10" direction="right">Welcome to MANIT Hostel Management Site</marquee>
+
 <!-- <footer>@Copyright 2019</footer> -->
 <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
 	<a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">

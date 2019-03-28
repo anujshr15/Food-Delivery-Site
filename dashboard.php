@@ -22,7 +22,7 @@ $id=$_SESSION['sid'];
 		}
 
 		body {
-			 background-image: linear-gradient(to right, rgba(140,100,60,.2), rgba(20,180,170,.4));
+			 background-image: linear-gradient(to right, rgba(255,104,240,.3), rgba(20,180,170,.4));
 		}
 
 		
