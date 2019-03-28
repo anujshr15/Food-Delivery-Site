@@ -16,7 +16,7 @@
 	<span style="text-align: center;"><a href="index.php"></a></span>
 	<ul   style="list-style-type: none;margin: 0;padding-bottom: 30px;padding-top: 10px;">
 		<?php if(isset($_SESSION['sid'])) {?>
-		<li>Dashboard</li>
+		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
 		<li>Review a Room</li>
 		<li><a  class "design" href="complaint.php">Complaints</a></li>
