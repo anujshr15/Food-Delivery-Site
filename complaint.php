@@ -14,13 +14,23 @@
 	<title>COMPLAINTS</title>
 
 <style>
-#grad1 {
-  background-image: linear-gradient(to right,rgba(255,0,0,0),rgba(0,0,255,0.3),rgba(255,0,0,0));
+div
+{
+  width: 50%;
+  background-color: lavender;
+  opacity: 1;
+  margin:auto;
+  margin-top: 55px;
+  border-radius: 40px;
+}
+#grad1 
+{
+  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
 }
 
 .button 
 {
-  background-color: lightgreen;
+  background-color: springgreen;
   border: none;
   color: black;
   padding: 12px 24px;
@@ -71,6 +81,7 @@ footer
 body
 {
   margin:0;
+  background-color: black;
 }
 textarea
 {
@@ -80,6 +91,7 @@ textarea
   border-style: groove;
   border-width: 1.6px;
   border-color: red;
+  overflow: auto;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="nav.css">
@@ -92,8 +104,9 @@ textarea
   <?php include 'navbar.php' ?>
 
 </header>
-
-<form  action="complaint_handler.php"  style="text-align: center;" method="POST">
+<div>
+  <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Grievance Redressal Portal</h2>
+<form  action="complaint_handler.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 	
 <h3 >Enter Hostel Number:</h3>
 <input type="number" name="hostelno" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
@@ -118,6 +131,7 @@ textarea
 <input type="reset" class="button">
 
 </form>
+</div>
 <br>
 <br>
 <footer>
