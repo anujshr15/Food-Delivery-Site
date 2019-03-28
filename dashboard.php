@@ -60,7 +60,7 @@ $id=$_SESSION['sid'];
 	 
 	 }
 
-	 echo "<table cellspacing=0><tr><th>Name: </th><td>$name</td></tr><tr><th>Phone: </th><td>$phone</td></tr><tr><th>Hostel No: </th><td>$hostelno</td></tr><tr><th>Room No:  </th><td>$roomno</td></tr></table>";
+	 echo "<table cellspacing=0><tr><th>Scholar ID: </th><td>$id</td></tr><tr><th>Name: </th><td>$name</td></tr><tr><th>Phone: </th><td>$phone</td></tr><tr><th>Hostel No: </th><td>$hostelno</td></tr><tr><th>Room No:  </th><td>$roomno</td></tr></table>";
 
 	 ?>
 
