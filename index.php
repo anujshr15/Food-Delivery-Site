@@ -9,11 +9,82 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="nav.css">
 
 </head>
-<body>
+<body id="grad1">
 <?php include 'navbar.php' ?>
-<div>
-	<img src="hostel_1.jpg" width="100%" height="350px">
-<div>
+
+
+
+<div class="slideshow-container" style="margin-top: 50px;">
+
+<div class="mySlides fade" >
+  <img src="hostel1.png" style="width:100%;height: 360px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="hostel2.png" style="width:100%;height: 360px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="hostel3.png" style="width:100%;height: 360px;">
+</div>
+
+<div class="mySlides fade" >
+  <img src="hostel4.png" style="width:100%;height: 360px;">
+</div>
+
+<div class="mySlides fade" >
+  <img src="hostel5.png" style="width:100%;height: 360px;">
+</div>
+
+<div class="mySlides fade" >
+  <img src="hostel6.png" style="width:100%;height: 360px;">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<!--
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+-->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
 <marquee scrollamount="10" direction="right">Welcome to MANIT Hostel Management Site</marquee>
 <!-- <footer>@Copyright 2019</footer> -->
 <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
