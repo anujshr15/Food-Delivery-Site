@@ -10,11 +10,11 @@
 <nav style="margin-top: -25px;">
 	<img src="manitlogo.png" style="width:auto; height: 140px; float: left;padding-top: 20px;padding-left: 20px;">
     
-	<h2 style="color: yellow;text-align: center;padding-top: 16px;word-spacing: 3px;letter-spacing: 1px;text-shadow: 2px 2px red;">Hostel Management System</h2>
+	<h2 style="text-align: center;padding-top: 16px;word-spacing: 3px;letter-spacing: 1px;text-shadow: 2px 2px red;"><a href="index.php" style="color: yellow;">Hostel Management System</a></h2>
 	<h4 style="color: yellow;text-align: center;word-spacing: 3px;letter-spacing: 1px;padding-top: 0px;">Maulana Azad National Institute of Technology, Bhopal</h4>
     
-	<span style="text-align: center;"><a href="index.php"></a></span>
-	<ul   style="list-style-type: none;margin: 0;padding-bottom: 30px;padding-top: 10px;">
+	<span style="text-align: center;"><a href="index.php">Home</a></span>
+	<ul   style="list-style-type: none;margin: 0;">
 		<?php if(isset($_SESSION['sid'])) {?>
 		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
