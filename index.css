@@ -1,16 +1,21 @@
 
-body {
+body 
+{
 	margin:0;
 }
 
 
-footer h2 {
+footer h2 
+{
 	text-decoration: none;
 	pointer-events: none;
-	color:black;
+	color:white;
+
 }
 
-a:link,a:visited {
+a:link,a:visited 
+{
 	color:white;
 	text-decoration: none;
+	display: inline-block;
 }

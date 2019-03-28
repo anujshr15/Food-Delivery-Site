@@ -39,7 +39,6 @@ header
   text-align: center;
   font-size: 18px;
   color:yellow;
-  height: 148px;
 }
 select 
 {
@@ -74,8 +73,7 @@ body
 <body id="grad1">
 
 <header>
-  <img src="manitlogo.png" style="width: 120px;height: 120x;float: left;padding: 10px 20px;">
-  <h2>ROOM ALLOTMENT PORTAL </h2>
+
  <?php include 'navbar.php' ?>
 </header>
 

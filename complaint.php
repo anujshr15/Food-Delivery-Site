@@ -13,7 +13,7 @@
 <link type="text/css" rel="stylesheet" href="nav.css">
 	<title>COMPLAINTS</title>
 
-	<style>
+<style>
 #grad1 {
   background-image: linear-gradient(to right,rgba(255,0,0,0),rgba(0,0,255,0.3),rgba(255,0,0,0));
 }
@@ -39,15 +39,21 @@ header
   text-align: center;
   font-size: 18px;
   color:yellow;
-  height: 148px;
 }
 select 
 {
   width: 38%;
-  padding: 16px 20px;
-  border: none;
-  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: #f1f1f1;
+  border-radius: 20px;
+  border-bottom-style: groove;
+  border-bottom-width: 2px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: red;
 }
 form
 {
@@ -66,6 +72,15 @@ body
 {
   margin:0;
 }
+textarea
+{
+  border-radius: 20px;
+  padding-left: 20px;padding-right: 20px;
+  font-size: 18px;
+  border-style: groove;
+  border-width: 1.6px;
+  border-color: red;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="nav.css">
 </head>
@@ -73,8 +88,7 @@ body
 <body id="grad1">
 
 <header>
-  <img src="manitlogo.png" style="width: 120px;height: 120x;float: left;padding: 10px 20px;">
-  <h2>GRIEVANCE REDRESSAL PORTAL </h2>
+
   <?php include 'navbar.php' ?>
 
 </header>
@@ -82,10 +96,10 @@ body
 <form  action="complaint_handler.php"  style="text-align: center;" method="POST">
 	
 <h3 >Enter Hostel Number:</h3>
-<input type="number" name="hostelno" min="1" max="10" style="width: 36.5%;height: 25px;border-radius: 10px;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;">
+<input type="number" name="hostelno" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
 
 <h3>Select Complaint Category:</h3>
-<select name="Complaint" style="width: 38%;">
+<select name="Complaint">
 <option value="MESS">MESS</option>
 <option value="ROOM">ROOM</option>
 <option value="ELECTRICITY">ELECTRICITY</option>
@@ -96,7 +110,7 @@ body
 <br>
 
 <h3>Write a brief description of your complaint:</h3><br>
-<textarea name="message" rows="12" cols="60" style="border-radius: 20px;padding-left: 20px;padding-right: 20px;font-size: 18px;">
+<textarea name="message" rows="12" cols="56">
 </textarea>
 <br><br>
 
