@@ -15,8 +15,9 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
 	<title>Thank You!!</title>
 	<style type="text/css">
 		body{
-			background-color: powderblue ;
+			background-color:yellow ;
 			
+
 
 		}
 

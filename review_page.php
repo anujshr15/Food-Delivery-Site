@@ -17,26 +17,57 @@ session_start();
 	<title>REVIEW</title>
 	<style type="text/css">
 
+        	div{
 
+  width: 50%;
+  background-color: lavender;
+  opacity: 1;
+  margin:auto;
+  margin-top: 55px;
+  border-radius: 40px;
+}
 
-		body{
-			background-color: lavender ;
+		
+ header 
+{
+  background-color: black;
+  padding: 6px;
+  text-align: center;
+  font-size: 18px;
+  color:yellow;
+}
+body
+{
+  margin:0;
+  background-color: black;
+}
+
 			
 
-		}
-	
+		#grad1 
+{
+  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
+}
+
+
+
 	
 }
 
        
-    
+    form
+{
+	padding: 20px 0;
+	margin-left: 40px;
+}
+
 
 		
 
 	</style>
 
 </head>
-<body> 
+<body id="grad1"> 
 	<header>
 
   <?php include 'navbar.php' ?>
@@ -44,20 +75,30 @@ session_start();
 </header>
 	<!--<h1>MAULANA AZAD NATIONAL INSTITUTE OF TECHNOLOGY</h1>
 	<img src="3.jpg" width="100%" height="220px" class="logo" style="margin-top:80px ;">-->
-	<div class="main">
-	<form action="review.php" method="POST"  style="margin-top:5px ;width: 50%;text-align: center;height: 250px; margin-left: 25%">
+	<div>
+  <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Review Portal</h2>
+<form  action="review.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 
-		<fieldset>
-			<legend style="text-align: center">REVIEW</legend>
-		ROOM:<br><input type="text" name="room"><br>
-		NAME:<br><input type="text" name="student"><br>
-		SCHOLAR_NO:<br><input type="number" name="rno"><br>
-		REVIEW:<br><input type="text" name="rev" style="width:90% ; height:100px ; "><br>
-		<input type="submit">
-		 </fieldset>
+<h3 >Enter Room Number:</h3>
+<input type="int" name="room" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
+<h3 >Enter Scholar Number:</h3>
+<input type="int" name="rno" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
+<h3 >Enter Name:</h3>
+<input type="int" name="student" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
 
-	</form>
-	</div>
+
+
+<h3>Description of Room</h3><br>
+<textarea name="rev" rows="12" cols="56">
+</textarea>
+<br><br>
+
+<input type="submit" class="button">
+<input type="reset" class="button">
+
+</form>
+</div>
+
 <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
 	<a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">
 <img src="facebook.png" width="40" height="30">
