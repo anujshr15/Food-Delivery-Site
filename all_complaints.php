@@ -16,6 +16,8 @@ $num=mysqli_num_rows($res);
 			border:1px solid black;
 			box-shadow: 0 0 10px rgba(0,0,0,0.6);
 			width:50%;
+			min-height: 80px;
+			height: auto;
 			margin: 20px auto;
 			font-size: 1.2em;
 			text-align: center;
@@ -32,23 +34,6 @@ $num=mysqli_num_rows($res);
 	<?php include 'navbar.php' ?>
 
 	
-
-	<!-- <table>
-	<tr>
-		<th>
-			Complaint ID
-		</th>
-		<th>
-			Hostel No.
-		</th>
-		<th>
-			Description
-		</th>
-		<th>
-			Status
-		</th>
-
-	</tr> -->
 <?php 
 function getcol($s)
 	{
@@ -57,6 +42,11 @@ function getcol($s)
 		else
 			return "green";
 	}
+if($num==0)
+{
+	echo "<div class=\"box\">YOU HAVE NOT FILED A COMPLAINT YET !</div>";
+}
+else{
 for($i=0;$i<$num;$i++)
 {
 	$row=mysqli_fetch_array($res);
@@ -80,6 +70,7 @@ for($i=0;$i<$num;$i++)
 		<hr width=\"50%\"/>
 		<p>$description</p>
 	</div>";
+}
 }
  ?>
 
