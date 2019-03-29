@@ -2,16 +2,18 @@
 body 
 {
 	margin:0;
+  background-color: white;
 }
 
 
-footer h2 
+/*footer h2 
 {
 	text-decoration: none;
 	pointer-events: none;
 	color:white;
 
-}
+}*/
+
 
 a:link,a:visited 
 {
@@ -117,12 +119,4 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-#grad1 
-{
-  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
-}
-body
-{
-  margin:0;
-  background-color: black;
-}
+

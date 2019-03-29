@@ -25,9 +25,9 @@ div
   margin-top: 55px;
   border-radius: 40px;
 }
-#grad1 
+.grad1 
 {
-  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
 
 .button 
@@ -72,44 +72,40 @@ form
 	padding: 20px 0;
 	margin-left: 40px;
 }
-footer 
-{
-  background-color:black;
-  padding: 1px 0;
-  text-align: center;
-  color: yellow;
-  font-size: 18px;
-}
+
 body
 {
   margin:0;
-  background-color: black;
 }
 textarea
 {
   border-radius: 20px;
-  padding-left: 20px;padding-right: 20px;
+  padding: 20px;
   font-size: 18px;
   border-style: groove;
   border-width: 1.6px;
   border-color: red;
   overflow: auto;
 }
+
 </style>
 <link rel="stylesheet" type="text/css" href="nav.css">
 </head>
 
-<body id="grad1">
+<body class="grad1">
 
 <header>
 
   <?php include 'navbar.php' ?>
 
+
 </header>
 <div>
-  <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Grievance Redressal Portal</h2>
-<form  action="complaint_handler.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 
+  
+<form  action="complaint_handler.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
+<h3 ><a style="margin-top: 5px; text-align: center;text-decoration: none;" href="all_complaints.php">View Your Complaints</a></h3>
+<h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Grievance Redressal Portal</h2>
 <h3 >Enter Hostel Number:</h3>
 <input type="number" name="hostelno" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
 
@@ -134,6 +130,7 @@ textarea
 
 </form>
 </div>
+<<<<<<< HEAD
 <br>
 <br>
 <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
@@ -155,7 +152,11 @@ Copyright 2019
     var dt=new Date();
     par.innerText+=" "+(dt.getYear()+1900).toString();
   </script> -->
+=======
+>>>>>>> da69b6bd37d1d11b411f624a461c0fcfe66ee94a
 
+
+<?php include 'footer.php' ?>
 </body>
 
 </html>

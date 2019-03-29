@@ -70,5 +70,7 @@ $id=$_SESSION['sid'];
 
 	 ?>
 
+<?php include 'footer.php' ?>
+
 </body>
 </html>

@@ -24,9 +24,9 @@ div
   margin-top: 55px;
   border-radius: 40px;
 }
-#grad1 
+.grad1 
 {
-  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
 
 .button 
@@ -64,25 +64,16 @@ form
   padding-top: 70px;
   height: 430px;
 }
-footer 
-{
-  background-color:black;
-  padding: 1px 0;
-  text-align: center;
-  color: yellow;
-  font-size: 18px;
-}
+
 body
 {
   margin:0;
-  background-color: black;
 }
 </style>
-<link rel="stylesheet" type="text/css" href="nav.css">
 
 </head>
 
-<body id="grad1">
+<body class="grad1">
 
 <header>
 
@@ -104,13 +95,8 @@ body
 
 </form>
 </div>
-<br>
-<br>
-<footer>
-<pre>
- Link Road No 3,Near Kali Mata Mandir,Bhopal 462003 |  <a href="http://www.manit.ac.in/" style="color: yellow;">www.manit.ac.in</a>  | Telephone: +91 755 4051000,4052000,2670900 | Fax: +91-755 2670562
-</pre>
-</footer>
+
+<?php include 'footer.php' ?>
 
 </body>
 
