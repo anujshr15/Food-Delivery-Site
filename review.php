@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link type="text/css" rel="stylesheet" href="nav.css">
 	<title>Thank You!!</title>
 	<style type="text/css">
 		body{
@@ -8,18 +9,8 @@
 			
 
 		}
-		.head{
-	 width: 90%;
-	position: absolute;
-	margin-top: 5px ;
-	margin-left: 80px ;
-	font-size: 75% ;
-	background-color: black ;
-	color: yellow ;
-	letter-spacing: 2.5px ;
-	word-spacing: 5px ;
-	font-weight: lighter;
-}
+
+	
 
  .re{
   width: 300px;
@@ -37,16 +28,40 @@
   	text-align  
   }
 	</style>
+	<link rel="stylesheet" type="text/css" href="nav.css">
 </head>
 <body>
 	<div class="head">
-	<h1>MAULANA AZAD NATIONAL INSTITUTE OF TECHNOLOGY</h1>
-	</div>
-	<img src="3.jpg" width="100%" height="220px" class="logo" style="margin-top:80px ;">
+	<header>
+
+		<?php include 'navbar.php'?>
+	</header>
 	<h2><?php echo $_POST["room"] ;?></h2>
   <div class="re"><em>
   <?php echo $_POST["rev"] ; ?></em></div>
   <div class="me">by <?php  echo $_POST["student"] ; ?></div>
+
+  <!-- <footer>@Copyright 2019</footer> -->
+<footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
+	<a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">
+<img src="facebook.png" width="40" height="30">
+</a>
+<a href="https://twitter.com/manitbpl" >
+	<img src="twitter.png" width="30" height="30">
+</a>
+<a href="https://www.youtube.com/channel/UCXzZC99puUZuJDiQ09p72cw?reload=9">
+	<img src="youtube.png" width="50" height="30">
+</a>
+<a href="https://plus.google.com/u/0/103957241353925049032"></a>
+<img src="googleplus.png" width="34" height="30"><br>
+Copyright 2019
+</footer>
+<!-- <script>
+		var par=document.querySelector("footer");
+		var dt=new Date();
+		par.innerText+=" "+(dt.getYear()+1900).toString();
+	</script> -->
+
 
 </body>
 </html>
