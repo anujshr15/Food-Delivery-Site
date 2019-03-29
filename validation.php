@@ -7,10 +7,11 @@
     $q="select * from users where sid='$sid' and password='$password'";
     $result=mysqli_query($con,$q);
     $num=mysqli_num_rows($result);
+    $url=$_SESSION['url'];    
     if($num==1)
     {
     	$_SESSION['sid']=$sid;
-    	header("Location: index.php");
+    	header("Location: $url");
     }
     else{
      header("Location: login.php");

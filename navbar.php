@@ -18,7 +18,7 @@
 		<?php if(isset($_SESSION['sid'])) {?>
 		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
-		<li>Review a Room</li>
+		<li><a href="review_page.php">Review a Room</a></li>
 		<li><a  class "design" href="complaint.php">Complaints</a></li>
 	<?php } ?>
 		<?php if(isset($_SESSION['sid'])) { ?>

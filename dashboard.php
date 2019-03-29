@@ -1,6 +1,12 @@
 <?php 
 session_start();
+$_SESSION['url']=$_SERVER['REQUEST_URI'];
+  if(isset($_SESSION['sid'])==0)
+  {
+    header("Location: login.php");
+  }
 $id=$_SESSION['sid'];
+
  ?>
 <!DOCTYPE html>
 <html>
