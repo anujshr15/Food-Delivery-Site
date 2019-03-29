@@ -12,26 +12,70 @@ if(isset($_SESSION['sid']))
 <html>
 <head>
 	
-	<title> LOGIN PANEL</title>
-    <style>
-body {background-color:powderblue;}
-fieldset {align-content: center;}
+<title> LOGIN PANEL</title>
+
+<style>
+body
+{
+
+}
+.grad1 
+{
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
+}
+
+div
+{
+margin: auto;
+width: 30%;
+text-align:center;
+margin-top: 100px;
+border: 3px solid #f1f1f1;
+padding: 30px;
+border-radius: 30px;
+font-family: arial;
+opacity: 1;
+background-color: lavender;
+
+}
+.button:hover
+{
+opacity: 1;
+}
+.button 
+{
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  border-radius: 10px;
+  opacity: 0.75;
+}
 </style>
 </head>
-<body>
+<body class="grad1">
 	<?php include 'navbar.php' ?>
-	<FORM action="validation.php" method="post" style="margin: auto;width: 30%;text-align: center;height: 250px;padding-top: 100px;">
-		<fieldset>
-			<legend style="text-align: center">LOGIN PANEL</legend>
-		Scholar ID:<br>
-        <input type="number" name="sid"><br>
-        Password:<br>
-        <input type="password" name="password">
-        <br><br>
-        <input type="submit" align="center">
-    </fieldset>
-	</FORM>
-	
 
+    <div>
+	<FORM action="validation.php" method="post" >
+	
+	<h2 style="text-align: center;">LOGIN FORM</h2>
+    <img src="login_icon1.png" style="height: 100px;width: 100px;">
+    <br>
+    <br>
+    
+		Scholar ID:<br>
+        <input type="number" placeholder="Enter Scholar Id" name="sid" style="width: 60%;height: 30px;border-radius: 10px;padding: 10px;"><br><br>
+        Password:<br>
+        <input type="password" placeholder="Enter Password" name="password" style="width: 60%;height: 30px;border-radius: 10px;padding: 10px;">
+        <br><br>
+        <input type="submit" align="center" class="button">
+    
+	</FORM>
+	</div>
+<?php include 'footer.php' ?>
 </body>
 </html>
