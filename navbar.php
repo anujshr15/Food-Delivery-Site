@@ -15,12 +15,11 @@
     
 	<span style="text-align: center;"><a href="index.php">Home</a></span>
 	<ul   style="list-style-type: none;margin: 0;">
-		<?php if(isset($_SESSION['sid'])) {?>
 		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
 		<li><a href="review_page.php">Review a Room</a></li>
 		<li><a  class "design" href="complaint.php">Complaints</a></li>
-	<?php } ?>
+	
 		<?php if(isset($_SESSION['sid'])) { ?>
 		<li><?php echo "".$_SESSION['sid'] ?> <a class "design" href="logout.php">Logout</a></li>
 		<?php } else { ?><li><a  href="login.php">Login </a></li><li><a href="register.php">Register </a></li> <?php } ?>
