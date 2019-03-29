@@ -3,7 +3,7 @@ session_start();
 $con=mysqli_connect('localhost','root');
 mysqli_select_db($con,'hostel');
 $sid=$_SESSION['sid'];
-$q="select * from complaints where cid in (select cid from writes_com where sid=$sid)";
+$q="select * from complaints where cid in (select cid from writes_com where sid=$sid) ORDER BY cid DESC";
 $res=mysqli_query($con,$q);
 $num=mysqli_num_rows($res);
 ?>
