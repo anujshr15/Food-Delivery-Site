@@ -21,12 +21,17 @@ $num=mysqli_num_rows($res);
 			margin: 20px auto;
 			font-size: 1.2em;
 			text-align: center;
+			background: white;
 		}
 
 		.box:hover {
 			transform: scale(1.1);
 			transition: all 200ms ease-in;
 
+		}
+
+		body {
+			 background-image: linear-gradient(to right, rgba(255,104,240,.3), rgba(20,180,170,.4));
 		}
 	</style>
 </head>
