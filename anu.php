@@ -34,7 +34,6 @@
 	</header>
 
 
-  <?php include 'navbar.php' ?>
 
 </header>
 	<!--<h1>MAULANA AZAD NATIONAL INSTITUTE OF TECHNOLOGY</h1>
