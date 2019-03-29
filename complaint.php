@@ -94,6 +94,7 @@ textarea
   border-color: red;
   overflow: auto;
 }
+
 </style>
 <link rel="stylesheet" type="text/css" href="nav.css">
 </head>
@@ -106,9 +107,11 @@ textarea
 
 </header>
 <div>
-  <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Grievance Redressal Portal</h2>
-<form  action="complaint_handler.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 
+  
+<form  action="complaint_handler.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
+<h3 ><a style="margin-top: 5px; text-align: center;text-decoration: none;" href="all_complaints.php">View Your Complaints</a></h3>
+<h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Grievance Redressal Portal</h2>
 <h3 >Enter Hostel Number:</h3>
 <input type="number" name="hostelno" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
 
