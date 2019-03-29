@@ -15,9 +15,23 @@ session_start();
 <head>
 	<link type="text/css" rel="stylesheet" href="nav.css">
 	<title>REVIEW</title>
-	<style type="text/css">
-
-        	div{
+	<style>
+.button 
+{
+  background-color: springgreen;
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 24px;
+}
+div
+{
 
   width: 50%;
   background-color: lavender;
@@ -39,44 +53,60 @@ session_start();
 body
 {
   margin:0;
-  background-color: black;
 }
 
 			
 
-		#grad1 
+#grad1 
 {
-  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
 
-
+textarea
+{
+  border-radius: 20px;
+  padding:20px;
+  font-size: 18px;
+  border-style: groove;
+  border-width: 1.6px;
+  border-color: red;
+  overflow: auto;
+}
 
 	
-}
+
 
        
-    form
+form
 {
 	padding: 20px 0;
 	margin-left: 40px;
+}
+footer 
+{
+  background-color:black;
+  padding: 1px 0;
+  text-align: center;
+  color: yellow;
+  font-size: 18px;
+  margin-top: 400px;
 }
 
 
 		
 
-	</style>
+</style>
 
 </head>
 <body id="grad1"> 
-	<header>
+<header>
 
   <?php include 'navbar.php' ?>
 
 </header>
-	<!--<h1>MAULANA AZAD NATIONAL INSTITUTE OF TECHNOLOGY</h1>
-	<img src="3.jpg" width="100%" height="220px" class="logo" style="margin-top:80px ;">-->
-	<div>
-  <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Review Portal</h2>
+
+<div>
+<h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Student Review Portal</h2>
 <form  action="review.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 
 <h3 >Enter Room Number:</h3>
@@ -99,7 +129,10 @@ body
 </form>
 </div>
 
-<footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
+<footer>
+  <pre>
+ Link Road No 3,Near Kali Mata Mandir,Bhopal 462003 |  <a href="http://www.manit.ac.in/" style="color: yellow;">www.manit.ac.in</a>  | Telephone: +91 755 4051000,4052000,2670900 | Fax: +91-755 2670562
+</pre>
 	<a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">
 <img src="facebook.png" width="40" height="30">
 </a>
