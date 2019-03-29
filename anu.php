@@ -1,56 +1,58 @@
-<?php 
-session_start();
-$_SESSION['url']=$_SERVER['REQUEST_URI'];
-  if(isset($_SESSION['sid'])==0)
-  {
-    header("Location: login.php");
-  }
-
- ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<link type="text/css" rel="stylesheet" href="nav.css">
-	<title>Thank You!!</title>
+	<title>ANU</title>
 	<style type="text/css">
+
+
+
+
 		body{
-			background-color: powderblue ;
+			background-color: lavender ;
 			
 
 		}
 
 	
-
- .re{
-  width: 300px;
-  border: 5px solid grey;
-  padding: 25px;
-  margin: 25px;
-  margin-left: 33% ;
-  border-radius: 25px;
+	
 }
- .me{
- 	margin-left: 62% ;
- }
-  h2{
-  	font-size: 120%
-  	text-align  
-  }
+
+       
+    
+
+		
+
 	</style>
 	<link rel="stylesheet" type="text/css" href="nav.css">
+
 </head>
-<body>
-	<div class="head">
+<body> 
 	<header>
 
 		<?php include 'navbar.php'?>
 	</header>
-	<h2><?php echo $_POST["room"] ;?></h2>
-  <div class="re"><em>
-  <?php echo $_POST["rev"] ; ?></em></div>
-  <div class="me">by <?php  echo $_POST["student"] ; ?></div>
 
+
+
+</header>
+	<!--<h1>MAULANA AZAD NATIONAL INSTITUTE OF TECHNOLOGY</h1>
+	<img src="3.jpg" width="100%" height="220px" class="logo" style="margin-top:80px ;">-->
+
+	<div class="main">
+	<form action="review.php" method="POST"  style="margin-top:5px ;width: 50%;text-align: center;height: 250px; margin-left: 25%">
+
+		<fieldset>
+			<legend style="text-align: center">REVIEW</legend>
+		ROOM:<br><input type="text" name="room"><br>
+		NAME:<br><input type="text" name="student"><br>
+		SCHOLAR_NO:<br><input type="number" name="rno"><br>
+		REVIEW:<br><input type="text" name="rev" style="width:90% ; height:100px ; "><br>
+		<input type="submit">
+		 </fieldset>
+
+	</form>
+	</div>
   <!-- <footer>@Copyright 2019</footer> -->
 <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
 	<a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">
@@ -71,6 +73,7 @@ Copyright 2019
 		var dt=new Date();
 		par.innerText+=" "+(dt.getYear()+1900).toString();
 	</script> -->
+
 
 
 </body>
