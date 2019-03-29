@@ -133,7 +133,7 @@ textarea
 <<<<<<< HEAD
 <br>
 <br>
-<footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
+<!-- <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
   <a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">
 <img src="facebook.png" width="40" height="30">
 </a>
@@ -146,7 +146,7 @@ textarea
 <a href="https://plus.google.com/u/0/103957241353925049032"></a>
 <img src="googleplus.png" width="34" height="30"><br>
 Copyright 2019
-</footer>
+</footer> -->
 <!-- <script>
     var par=document.querySelector("footer");
     var dt=new Date();

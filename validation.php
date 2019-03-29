@@ -1,22 +1,30 @@
 <?php 
     session_start();
-    $_SESSION['url']=$_SERVER['REQUEST_URI'];
-     if(isset($_SESSION['sid']))
-    {   $ur=$_SESSION['url'];
-        header("Location: $ur");
-    }
 	$sid=$_POST['sid'];
 	$password=$_POST['password'];
     $con=mysqli_connect('localhost','root');
     mysqli_select_db($con,"Hostel");
     $q="select * from users where sid='$sid' and password='$password'";
     $result=mysqli_query($con,$q);
-    $num=mysqli_num_rows($result);
-    $url=$_SESSION['url'];    
+    $num=mysqli_num_rows($result); 
     if($num==1)
     {
     	$_SESSION['sid']=$sid;
-    	header("Location: $url");
+        ?>
+        <?php
+    	 if(isset($_SESSION['url']))
+        {$ur=$_SESSION['url'];
+        header("Location: $ur");
+        ?>
+        <?php 
+            }
+        else{
+            header("Location: index.php");
+        }
+    
+    ?>
+    <?php
+    
     }
     else{
      header("Location: login.php");
