@@ -130,9 +130,7 @@ textarea
 
 </form>
 </div>
-<<<<<<< HEAD
-<br>
-<br>
+
 <!-- <footer style="margin-top: 300px;text-align: center;background-color: black;padding-top: 20px;color: white;padding-bottom: 10px;">
   <a href="https://www.facebook.com/MANIT-Bhopal-217608298830555/">
 <img src="facebook.png" width="40" height="30">
@@ -152,8 +150,6 @@ Copyright 2019
     var dt=new Date();
     par.innerText+=" "+(dt.getYear()+1900).toString();
   </script> -->
-=======
->>>>>>> da69b6bd37d1d11b411f624a461c0fcfe66ee94a
 
 
 <?php include 'footer.php' ?>
