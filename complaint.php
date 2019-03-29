@@ -25,9 +25,9 @@ div
   margin-top: 55px;
   border-radius: 40px;
 }
-#grad1 
+.grad1 
 {
-  background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
 
 .button 
@@ -83,7 +83,6 @@ footer
 body
 {
   margin:0;
-  background-color: black;
 }
 textarea
 {
@@ -99,7 +98,7 @@ textarea
 <link rel="stylesheet" type="text/css" href="nav.css">
 </head>
 
-<body id="grad1">
+<body class="grad1">
 
 <header>
 

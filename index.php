@@ -5,11 +5,12 @@ session_start();
 <html>
 <head>
 	<title>MANIT HOSTEL</title>
+
 	<link type="text/css" rel="stylesheet" href="index.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 
 </head>
-<body id="grad1">
+<body style="background-color: lightcyan;">
 <?php include 'navbar.php' ?>
 <marquee scrollamount="10" direction="right">Welcome to MANIT Hostel Management Site</marquee>
 
