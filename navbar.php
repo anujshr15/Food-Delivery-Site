@@ -12,9 +12,9 @@
     
 	<h2 style="text-align: center;padding-top: 16px;word-spacing: 3px;letter-spacing: 1px;text-shadow: 2px 2px red;"><a href="index.php" style="color: yellow;">Hostel Management System</a></h2>
 	<h4 style="color: yellow;text-align: center;word-spacing: 3px;letter-spacing: 1px;padding-top: 0px;">Maulana Azad National Institute of Technology, Bhopal</h4>
-    
-	<span style="text-align: center;"><a href="index.php">Home</a></span>
+
 	<ul   style="list-style-type: none;margin: 0;">
+		<li><a href="index.php">Home</a></li>
 		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
 		<li><a href="review_page.php">Review a Room</a></li>
