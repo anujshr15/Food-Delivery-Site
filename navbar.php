@@ -19,6 +19,7 @@
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
 		<li><a href="review_page.php">Review a Room</a></li>
 		<li><a  class "design" href="complaint.php">Complaints</a></li>
+		<li><a  href="review_handler.php">View Reviews</a></li>
 	
 		<?php if(isset($_SESSION['sid'])) { ?>
 		<li><?php echo "".$_SESSION['sid'] ?> <a class "design" href="logout.php">Logout</a></li>

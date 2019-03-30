@@ -1,0 +1,24 @@
+<?php 
+
+session_start();
+  $_SESSION['url']=$_SERVER['REQUEST_URI'];
+  if(isset($_SESSION['sid'])==0)
+  {
+    header("Location: login.php");
+  }
+
+
+ ?>
+ <?php 
+ $con=mysqli_connect('localhost','root') ;
+mysqli_select_db($con,'hostel') ;
+$a=$POST_["hos"] ;
+$b=$POST_["room"] ;
+$q="select description,rid  from reviews where hostel_no=$a and room_no=$b ";
+$result=mysqli_query($con,$q) ;
+$num=mysqli_num_rows($result) ;
+for($i=1;$i<=num;$i++){
+	$row=mysqli_fetch_array($result) ;
+	echo $row["description"]." ".$row["rid"] ;
+}
+?>
