@@ -7,10 +7,23 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
   }
 
  ?>
+  <?php 
+$a=$_POST["rno"]  ;
+$b=$_POST["room"] ;
+$c=$_POST["hos"]  ;
+$d=$_POST["rev"]  ;
+
+$con=mysqli_connect('localhost','root') ;
+mysqli_select_db($con,'hostel') ;
+$q="insert into reviews(rid,room_no,hostel_no,description) values('$a','$b','$c','$d')" ;
+mysqli_query($con,$q) ;
+mysqli_close($con) ;
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
+
 	<link type="text/css" rel="stylesheet" href="nav.css">
 	<title>Thank You!!</title>
 	<style type="text/css">
