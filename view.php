@@ -74,11 +74,20 @@ $num=mysqli_num_rows($result) ;
 if($num>=1){
 for($i=1;$i<=$num;$i++){
 	$row=mysqli_fetch_array($result) ;
-	echo "By<br>".$row["description"]."<br>".$row["rid"]."<br><br><br>" ;
+	echo $row["description"]."<br>By<br>".$row["rid"]."<br><br><br>" ;
 }}
 else{
 	echo "No reviews yet<br>" ;
 }
 ?></em>
 </div>
+
+ <!-- <footer>@Copyright 2019</footer> -->
+<?php include 'footer.php' ?>
+<!-- <script>
+		var par=document.querySelector("footer");
+		var dt=new Date();
+		par.innerText+=" "+(dt.getYear()+1900).toString();
+	</script> -->
 </body>
+
