@@ -8,15 +8,41 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
 
  ?>
   <?php 
-$a=$_POST["rno"]  ;
-$b=$_POST["room"] ;
-$c=$_POST["hos"]  ;
-$d=$_POST["rev"]  ;
 
+$m=$_SESSION['sid'] ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
-$q="insert into reviews(rid,room_no,hostel_no,description) values('$a','$b','$c','$d')" ;
-mysqli_query($con,$q) ;
+$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid" ;
+$result=mysqli_query($con,$n) ;
+$num=mysqli_num_rows($result) ;
+if($num>=1)
+echo "<script type='text/javascript'>
+                alert('You have already reviewed ,edit your response');
+            </script>";
+else{
+$q="select * from student where sid=$m";
+$res=mysqli_query($con,$q);
+$arr=mysqli_fetch_array($res);
+$roomid=$arr['roomid'];
+$d=$_POST["rev"] ;
+$roomno="";
+    $hostelno="";
+    
+    for($i=0;$i<strlen($roomid),$roomid[$i]!='_';$i++)
+    {
+      $hostelno.="$roomid[$i]";
+    }
+    $i++;
+    for(;$i<strlen($roomid);$i++)
+    {
+      $roomno.="$roomid[$i]";
+    }
+    $b="insert into writes_rev(sid) values($m)" ;
+    mysqli_query($con,$b) ;
+$a="insert into reviews(room_no,hostel_no,description) values('$roomno','$hostelno','$d')" ;
+mysqli_query($con,$a) ;
+}
+
 mysqli_close($con) ;
 ?>
 
@@ -72,6 +98,38 @@ mysqli_close($con) ;
 {
   background-image: linear-gradient(to right,rgba(60,120,255,.5),rgba(60,120,255,.5),rgba(60,120,255,0.5));
 }
+.btn{
+  margin-top:10px ;
+  color: blue ;
+  display: inline-block;
+  padding: 10px 30px ;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color0.2s,border 0.2s,color 0.2s ;
+  margin-left: 42% ;
+  border-radius: 5px ;
+}
+.btn-a{
+  background-color: green;
+  color: black ;
+  margin-right: 15px ;
+  border: 1px solid grey  ;
+
+}
+.btn-b{
+  background-color: transparent;
+  color: black ;
+  margin-right: 15px ;
+  border: 1px solid grey ;
+
+}
+.btn-a:hover{
+  background-color:green ;
+}
+.btn-b:hover{
+  background-color: grey ;
+}
+
 	</style>
 	<link rel="stylesheet" type="text/css" href="nav.css">
 </head>
@@ -81,11 +139,24 @@ mysqli_close($con) ;
 
 		<?php include 'navbar.php'?>
 	</header>
-	<div class="hey"><h2><?php echo $_POST["room"] ;?></h2></div>
+	<div class="hey"><h2><?php 
+  $m=$_SESSION['sid'] ;
+$con=mysqli_connect('localhost','root') ;
+mysqli_select_db($con,'hostel') ;
+$q="select * from student ,reviews,writes_rev where student.sid=$m and writes_rev.sid=student.sid and reviews.rid=writes_rev.rid";
+$res=mysqli_query($con,$q);
+$arr=mysqli_fetch_array($res);
+
+  echo $arr["roomid"] ;?></h2></div>
   <div class="re" ><em>
-  <?php echo $_POST["rev"] ; ?><br>By<br><?php  echo $_POST["student"] ; ?><br><?php  echo $_POST["rno"] ; ?></em></div>
-  
+  <?php echo $arr["description"] ; ?><br>By<br><?php  echo $_SESSION['sid']  ; ?><br></em></div>
+  <a href="delete.php" class="btn btn-a">Delete</a>
   </div>
+  
+    
+
+
+
 
   <!-- <footer>@Copyright 2019</footer> -->
 <?php include 'footer.php' ?>

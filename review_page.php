@@ -100,17 +100,12 @@ form
 </header>
 
 <div>
+<h3 ><a style="margin-top: 5px; text-align: center;text-decoration: none; margin-left: 33% ;" href="yourrev.php">View Your Review</a></h3>
 <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Student Review Portal</h2>
 <form  action="review.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 
-<h3 >Enter Hostel Number:</h3>
-<input type="int" name="hos" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
-<h3 >Enter Room Number:</h3>
-<input type="int" name="room" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
-<h3 >Enter Scholar Number:</h3>
-<input type="int" name="rno" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
-<h3 >Enter Name:</h3>
-<input type="int" name="student" min="1" max="10" style="width: 36.5%;border-radius: 20px;padding-left: 20px;padding-top: 14px;padding-bottom: 14px;border-bottom-style: 4px groove;border-top-style: none;border-left-style: none;border-right-style: none;border-color: red;">
+
+
 
 
 

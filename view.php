@@ -59,7 +59,17 @@ session_start();
 
 </header>
 <body>
-	<div class="hey"><h2><?php echo $_POST["hos"] ;?><?php echo $_POST["room"] ;?></h2></div>
+
+	<div class="hey"><h2><?php 
+ $con=mysqli_connect('localhost','root') ;
+mysqli_select_db($con,'hostel') ;
+$a=$_POST["hos"] ;
+$b=$_POST["room"] ;
+$f='_' ;
+$d=$a.$f ;
+$c=$d.$b ;
+echo $c ; ?>
+</h2></div>
   
   
   <div class="re">
@@ -68,13 +78,17 @@ session_start();
 mysqli_select_db($con,'hostel') ;
 $a=$_POST["hos"] ;
 $b=$_POST["room"] ;
-$q="select description,rid  from reviews where hostel_no=$a and room_no=$b ";
-$result=mysqli_query($con,$q) ;
+$f='_' ;
+$d=$a.$f ;
+$c=$d.$b ;
+
+$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and hostel_no=$a and room_no=$b " ;
+$result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
 if($num>=1){
 for($i=1;$i<=$num;$i++){
 	$row=mysqli_fetch_array($result) ;
-	echo $row["description"]."<br>By<br>".$row["rid"]."<br><br><br>" ;
+	echo "Review id :".$row['rid']."<br>".$row["description"]."<br>By<br>".$row["sid"]."<br><br><br>" ;
 }}
 else{
 	echo "No reviews yet<br>" ;
