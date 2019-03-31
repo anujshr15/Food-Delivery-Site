@@ -17,7 +17,7 @@ $result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
 if($num>=1)
 echo "<script type='text/javascript'>
-                alert('You have already reviewed ,edit your response');
+                alert('You have already reviewed ,delete your response then edit');
             </script>";
 else{
 $q="select * from student where sid=$m";
