@@ -58,4 +58,10 @@ session_start();
 <input type="submit" class="button">
 <input type="reset" class="button">
 </form>
+<?php include 'footer.php' ?>
+<!-- <script>
+    var par=document.querySelector("footer");
+    var dt=new Date();
+    par.innerText+=" "+(dt.getYear()+1900).toString();
+  </script> -->
 </html>
