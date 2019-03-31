@@ -10,24 +10,23 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
   <?php 
 
 $m=$_SESSION['sid'] ;
-echo $m ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
-$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and sid=$m" ;
+$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and sid='$m'" ;
 $result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
 
 
-
 if($num>=1)
-echo "<script type='text/javascript'>
+{echo "<script type='text/javascript'>
                 alert('You have already reviewed ,delete your response then edit');
-            </script>";
+            </script>";}
 else{
-$q="select * from student where sid=$m";
+$q="select * from student where sid='$m'";
 $res=mysqli_query($con,$q);
 $arr=mysqli_fetch_array($res);
 $roomid=$arr['roomid'];
+
 $d=$_POST["rev"] ;
 $roomno="";
     $hostelno="";
@@ -41,9 +40,9 @@ $roomno="";
     {
       $roomno.="$roomid[$i]";
     }
-    $b="insert into writes_rev(sid) values($m)" ;
+    $b="insert into writes_rev(sid) values('$m')" ;
     mysqli_query($con,$b) ;
-$a="insert into reviews(room_no,hostel_no,description) values('$roomno','$hostelno','$d')" ;
+$a="insert into reviews(roomid,description) values('$roomid','$d')" ;
 mysqli_query($con,$a) ;
 }
 
@@ -147,7 +146,7 @@ mysqli_close($con) ;
   $m=$_SESSION['sid'] ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
-$q="select * from student ,reviews,writes_rev where student.sid=$m and writes_rev.sid=student.sid and reviews.rid=writes_rev.rid";
+$q="select * from student ,reviews,writes_rev where student.sid='$m' and writes_rev.sid=student.sid and reviews.rid=writes_rev.rid";
 $res=mysqli_query($con,$q);
 $arr=mysqli_fetch_array($res);
 

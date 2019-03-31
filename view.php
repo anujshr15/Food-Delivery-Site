@@ -82,7 +82,7 @@ $f='_' ;
 $d=$a.$f ;
 $c=$d.$b ;
 
-$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and hostel_no=$a and room_no=$b " ;
+$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and roomid='$c'" ;
 $result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
 if($num>=1){
