@@ -34,6 +34,9 @@ $num=mysqli_num_rows($res);
 			 background-image: linear-gradient(to right, rgba(255,104,240,.3), rgba(20,180,170,.4));
 		}
 	</style>
+
+
+	
 </head>
 <body>
 	<?php include 'navbar.php' ?>
@@ -67,13 +70,17 @@ for($i=0;$i<$num;$i++)
 
 	$clr=getcol($status);
 		
-	echo "<div class=\"box\">
+	echo "<div class=\"box\" id=\"$cid\">
 		<span><strong>Complaint ID: $cid</strong></span>
 		<hr width=\"50%\"/>
 		<span><strong>Category: $category</strong></span>
 		<span>Status: <span style=\"color:$clr;\">$status</span></span>
 		<hr width=\"50%\"/>
 		<p>$description</p>
+		<form method=\"get\" action=\"delete_complaint.php\">
+		<input type=\"hidden\" name=\"deleteid\" value=\"$cid\">
+		<button>Delete</button>
+		</form>
 	</div>";
 }
 }

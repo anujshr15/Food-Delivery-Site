@@ -12,12 +12,18 @@ if($con){
 mysqli_select_db($con,"Hostel");
 $q="insert into users values($sid,'$password');insert into student(sid,name,phone) values($sid,'$name',$phone);";
 $res=mysqli_multi_query($con,$q);
-$url=$_SESSION['url'];
+
 if($res)
 {
 	echo "response received";
 	$_SESSION['sid']=$sid;
-	header("Location: $url");
+	if(isset($_SESSION['url']))
+	{
+		$url=$_SESSION['url'];
+		header("Location: $url");
+	}
+	header("Location index.php");
+	
 }
 else {
 
