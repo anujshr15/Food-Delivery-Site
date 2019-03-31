@@ -44,7 +44,8 @@ background-color: lavender;
 }
 .button:hover
 {
-opacity: 1;
+  background-color: lawngreen;
+  color: black;
 }
 .button 
 {
@@ -56,7 +57,6 @@ opacity: 1;
   cursor: pointer;
   width: 60%;
   border-radius: 10px;
-  opacity: 0.75;
 }
 </style>
 </head>

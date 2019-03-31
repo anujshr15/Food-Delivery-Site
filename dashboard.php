@@ -13,7 +13,8 @@ $id=$_SESSION['sid'];
 <head>
 	<title>Dashboard</title>
 	<style type="text/css">
-		table {
+	table 
+		{
 			/*border: 2px solid red;*/
 			width:50%;
 			margin: 40px auto;
@@ -22,13 +23,16 @@ $id=$_SESSION['sid'];
 			border-collapse: collapse;
 			text-align: center;
 			font-size: 1.1em;
+			margin-top: 120px;
 		}
-		td,th {
+		td,th 
+		{
 			border:2px solid red;
 		}
 
-		body {
-			 background-image: linear-gradient(to right, rgba(255,104,240,.3), rgba(20,180,170,.4));
+		body 
+		{
+			 background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 		}
 
 		

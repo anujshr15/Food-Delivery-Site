@@ -28,12 +28,16 @@ div
 {
   background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
-
+.button:hover
+{
+  background-color: lawngreen;
+  color: black;
+}
 .button 
 {
-  background-color: springgreen;
+  background-color: green;
   border: none;
-  color: black;
+  color: white;
   padding: 12px 24px;
   text-align: center;
   text-decoration: none;
