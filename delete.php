@@ -1,4 +1,32 @@
+<?php 
+session_start();
+$_SESSION['url']=$_SERVER['REQUEST_URI'];
+  if(isset($_SESSION['sid'])==0)
+  {
+    header("Location: login.php");
+  }
 
+ ?>
+ <?php
+ $m=$_SESSION['sid'] ;
+ $con=mysqli_connect('localhost','root') ;
+mysqli_select_db($con,'hostel') ;
+$q="select * from writes_rev where sid=$m" ;
+$result=mysqli_query($con,$q) ;
+$num=mysqli_num_rows($result) ;
+
+for($i=1;$i<=$num;$i++){
+	$row=mysqli_fetch_array($result) ;
+	$a=$row['rid'] ;
+	$p="delete from reviews where rid=$a " ;
+	mysqli_query($con,$p) ;
+}
+$p="delete from writes_rev where sid=$m " ;
+	mysqli_query($con,$p) ;
+
+
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>

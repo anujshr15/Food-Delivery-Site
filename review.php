@@ -10,11 +10,15 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
   <?php 
 
 $m=$_SESSION['sid'] ;
+echo $m ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
-$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid" ;
+$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and sid=$m" ;
 $result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
+
+
+
 if($num>=1)
 echo "<script type='text/javascript'>
                 alert('You have already reviewed ,delete your response then edit');
