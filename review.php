@@ -45,9 +45,9 @@ $roomno="";
     $ar=mysqli_fetch_array($add);
     $ri=$ar['max(rid)'] ;
     $rid=$ri+1 ;
-    $b="insert into writes_rev(rid,sid) values('$rid','$m')" ;
+    $b="insert into writes_rev(rid,sid) values($rid,$m)" ;
     mysqli_query($con,$b) ;
-$a="insert into reviews(roomid,description,rid) values('$roomid','$d','$rid')" ;
+$a="insert into reviews(roomid,description,rid) values('$roomid','$d',$rid)" ;
 mysqli_query($con,$a) ;
 }
 
