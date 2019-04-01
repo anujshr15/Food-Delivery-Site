@@ -40,9 +40,14 @@ $roomno="";
     {
       $roomno.="$roomid[$i]";
     }
-    $b="insert into writes_rev(sid) values('$m')" ;
+    $r="select max(rid) from writes_rev" ;
+    $add=mysqli_query($con,$r);
+    $ar=mysqli_fetch_array($add);
+    $ri=$ar['max(rid)'] ;
+    $rid=$ri+1 ;
+    $b="insert into writes_rev(rid,sid) values('$rid','$m')" ;
     mysqli_query($con,$b) ;
-$a="insert into reviews(roomid,description) values('$roomid','$d')" ;
+$a="insert into reviews(roomid,description,rid) values('$roomid','$d','$rid')" ;
 mysqli_query($con,$a) ;
 }
 
