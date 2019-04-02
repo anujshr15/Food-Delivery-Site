@@ -30,10 +30,11 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
   margin-left: 20% ;
   border-radius: 25px
   font color: red ;
-  background-color: green ;
+  background-color: white ;
   height: 200px ;
-  background-image: url(pen4.jpg) ;
+  /*background-image: url(pen4.jpg) ;*/
   text-decoration-color: red ;
+  height: 600px ;
 
 }
  .me{
@@ -82,7 +83,9 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
 .btn-b:hover{
   background-color: grey ;
 }
-
+.pic{
+  margin-left: 35% ;
+}
 	</style>
 </head>
 <body id="grad1"> 
@@ -91,18 +94,22 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
   <?php include 'navbar.php' ?>
 
 </header>
-	<div class="hey"><h2><?php 
+	<div class="re" >
+    <div class="hey"><h2><?php 
   $m=$_SESSION['sid'] ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
-$q="select * from student ,reviews,writes_rev where student.sid=$m and writes_rev.sid=student.sid and reviews.rid=writes_rev.rid";
+$q="select * from student ,reviews,writes_rev where student.sid='$m' and writes_rev.sid=student.sid and reviews.rid=writes_rev.rid";
 $res=mysqli_query($con,$q);
 $arr=mysqli_fetch_array($res);
 
-  echo $arr["roomid"] ;?></h2></div>
-  <div class="re" ><em>
-  <?php echo $arr["description"] ; ?><br>By<br><?php  echo $_SESSION['sid']  ; ?><br></em></div>
+  echo $arr["roomid"] ;?></h2> </div>
+  <div class="pic"><?php echo "<p><a href='".$arr['photo']."'><img src='".$arr['photo']."' width='200'  height='200' ></a></p> ";?></div>
+    <em>
+   
+  <br><br><br><?php echo $arr["description"] ; ?><br>By<br><?php  echo $_SESSION['sid']  ; ?><br></em></div>
   <a href="delete.php" class="btn btn-a">Delete</a>
+  </div>
 
     <!-- <footer>@Copyright 2019</footer> -->
 <?php include 'footer.php' ?>
