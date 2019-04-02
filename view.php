@@ -17,7 +17,7 @@ session_start();
 <head>
 	<link type="text/css" rel="stylesheet" href="nav.css">
 	<title>ROOM REVIEWS</title>
-	<style type="text/css" rel="stylesheet" href="nav.css">
+	<style type="text/css" rel="stylesheet" >
 		
 #grad1 
 {
@@ -53,11 +53,8 @@ session_start();
 	</style>
 </head>
 <body id="grad1"> 
-<header>
 
   <?php include 'navbar.php' ?>
-
-</header>
 <body>
 
 	<div class="hey"><h2><?php 

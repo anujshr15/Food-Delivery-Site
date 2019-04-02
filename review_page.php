@@ -32,7 +32,7 @@ session_start();
   cursor: pointer;
   border-radius: 24px;
 }
-div
+#all
 {
 
   width: 50%;
@@ -92,14 +92,9 @@ form
 </style>
 
 </head>
+<?php include 'navbar.php' ?>
 <body id="grad1"> 
-<header>
-
-  <?php include 'navbar.php' ?>
-
-</header>
-
-<div>
+<div id="all">
 <h3 ><a style="margin-top: 5px; text-align: center;text-decoration: none; margin-left: 33% ;" href="yourrev.php">View Your Review</a></h3>
 <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Student Review Portal</h2>
 <form  action="review.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">

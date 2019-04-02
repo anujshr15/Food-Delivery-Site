@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="nav.css">
+
 	<title>COMPLAINTS</title>
 
 <style>
@@ -32,7 +32,7 @@ a.design:hover
   border-radius: 20px;
 
 }
-div
+#all
 {
   width: 50%;
   background-color: lavender;
@@ -105,21 +105,20 @@ textarea
   border-width: 1.6px;
   border-color: red;
   overflow: auto;
+  width: 70%;
 }
 
+
 </style>
+
 <link rel="stylesheet" type="text/css" href="nav.css">
 </head>
 
+ <?php include 'navbar.php' ?>
 <body class="grad1">
 
-<header>
 
-  <?php include 'navbar.php' ?>
-
-
-</header>
-<div>
+<div id="all">
 
   
 <form  action="complaint_handler.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
