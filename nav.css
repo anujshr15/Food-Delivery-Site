@@ -1,11 +1,17 @@
 
-nav ul {
+#normal ul {
 	list-style: none;
 	text-align: center;
-	margin-top:0;
 	padding: 16px;
 	display: inline-block;
+	margin: none;
 
+}
+
+nav img {
+	width:140px;
+	height: 120px;
+	float: left;padding-top: 20px;padding-left: 20px;
 }
 
 nav a {
@@ -18,14 +24,14 @@ nav {
 }
 
 
-nav a:link, nav a:visited {
+#normal a:link, #normal a:visited {
 	color: white;
 	display: inline-block;
 	
 
 }
 
-nav a:active {
+#normal a:active {
 	color:pink;
 }
 
@@ -33,7 +39,7 @@ body {
 	margin:0;
 }
 
-nav ul li {
+#normal ul li {
 	padding: 20px;
 	display: inline;
 	margin-right: 25px;
@@ -41,6 +47,60 @@ nav ul li {
 	margin-top: 5px;
 }
 
+#ham div {
+	border:1px solid white;
+	margin:5px;
+	width: 20px;
+}
+
+#ham {
+	display: none;
+	padding: 5px;
+
+}
+
+
+@media(max-width: 1078px)
+{
+	nav img {
+		width:70px;
+		height: 70px;
+	}
+
+
+	
+
+	#ham {
+		display: block;
+		width: 17px;
+		margin: auto;
+	}
+
+	#ham:hover {
+		cursor: pointer;
+	}
+
+	.open {
+	display: block;
+
+}
+.close {
+	display: none;
+
+}
+
+#normal ul {
+	margin-left: 4%;
+}
+#normal ul li {
+	display: block;
+	
+}
+
+
+
+
+}
 
 
 
