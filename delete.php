@@ -79,7 +79,7 @@ $p="delete from writes_rev where sid='$m' " ;
 		<li><a  class "design" href="complaint.php">Complaints</a></li>
 		<li><a  href="review_handler.php">View Reviews</a></li>
 	
-				<li>171112028 <a class "design" href="logout.php">Logout</a></li>
+				<li><?php echo $_SESSION['sid'] ;?> <a class "design" href="logout.php">Logout</a></li>
 			</ul>
 </nav>
 </header>
