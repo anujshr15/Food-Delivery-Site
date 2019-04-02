@@ -15,7 +15,11 @@ mysqli_select_db($con,'hostel') ;
 $n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and sid='$m'" ;
 $result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
+$filename=$_FILES["uploadfile"]["name"] ;
+$tempname=$_FILES["uploadfile"]["tmp_name"] ;
+$folder="photos/".$filename ;
 
+move_uploaded_file($tempname, $folder) ;
 
 if($num>=1)
 {echo "<script type='text/javascript'>
@@ -45,7 +49,7 @@ $roomno="";
     $ar=mysqli_fetch_array($add);
     $ri=$ar['max(rid)'] ;
     $rid=$ri+1 ;
-    $a="insert into reviews(roomid,description,rid) values('$roomid','$d',$rid)" ;
+    $a="insert into reviews(roomid,description,rid,photo) values('$roomid','$d',$rid,'$folder')" ;
 mysqli_query($con,$a) ;
     $b="insert into writes_rev(rid,sid) values($rid,$m)" ;
     mysqli_query($con,$b) ;
@@ -53,6 +57,8 @@ mysqli_query($con,$a) ;
 }
 
 mysqli_close($con) ;
+?>
+<?php 
 ?>
 
 <!DOCTYPE html>
@@ -78,9 +84,9 @@ mysqli_close($con) ;
   margin-left: 20% ;
   border-radius: 25px
   font color: red ;
-  background-color: green ;
-  height: 200px ;
-  background-image: url(pen4.jpg) ;
+  background-color: white ;
+  height: 600px ;
+  /*background-image: url(pen4.jpg) ;*/
   text-decoration-color: red ;
 
 }
@@ -138,6 +144,9 @@ mysqli_close($con) ;
 .btn-b:hover{
   background-color: grey ;
 }
+.pic{
+  margin-left: 35% ;
+}
 
 	</style>
 	<link rel="stylesheet" type="text/css" href="nav.css">
@@ -148,7 +157,9 @@ mysqli_close($con) ;
 
 		<?php include 'navbar.php'?>
 	</header>
-	<div class="hey"><h2><?php 
+	
+  <div class="re" >
+    <div class="hey"><h2><?php 
   $m=$_SESSION['sid'] ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
@@ -156,9 +167,11 @@ $q="select * from student ,reviews,writes_rev where student.sid='$m' and writes_
 $res=mysqli_query($con,$q);
 $arr=mysqli_fetch_array($res);
 
-  echo $arr["roomid"] ;?></h2></div>
-  <div class="re" ><em>
-  <?php echo $arr["description"] ; ?><br>By<br><?php  echo $_SESSION['sid']  ; ?><br></em></div>
+  echo $arr["roomid"] ;?></h2> </div>
+  <div class="pic"><?php echo "<img src='".$arr['photo']."' width='200'  height='200' > ";?></div>
+    <em>
+   
+  <br><br><br><?php echo $arr["description"] ; ?><br>By<br><?php  echo $_SESSION['sid']  ; ?><br></em></div>
   <a href="delete.php" class="btn btn-a">Delete</a>
   </div>
   
