@@ -52,10 +52,11 @@ session_start();
 
 	</style>
 </head>
+<?php include 'navbar.php'?>
 <body id="grad1"> 
 
-  <?php include 'navbar.php' ?>
-<body>
+  
+
 
 	<div class="hey"><h2><?php 
  $con=mysqli_connect('localhost','root') ;
@@ -113,4 +114,5 @@ else{
 		par.innerText+=" "+(dt.getYear()+1900).toString();
 	</script> -->
 </body>
+</html>
 

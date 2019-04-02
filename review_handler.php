@@ -19,7 +19,7 @@ session_start();
 	<link type="text/css" rel="stylesheet" href="nav.css">
 	<title>ROOM REVIEWS</title>
 	<style type="text/css" rel="stylesheet" href="nav.css">
-div
+#all
 {
   width: 50%;
   background-color: lavender;
@@ -58,13 +58,10 @@ div
 	</style>
 </head>
 <body id="grad1"> 
-<header>
 
   <?php include 'navbar.php' ?>
 
-</header>
-
-<div>
+<div id="all">
 <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">VIEW REVIEW OF ROOMS</h2>
 <form  action="view.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
 

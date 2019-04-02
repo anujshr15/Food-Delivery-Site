@@ -15,7 +15,7 @@
 	<title>ROOM ALLOTMENT</title>
 
 	<style>
-div
+#all
 {
   width: 46%;
   background-color: lavender;
@@ -79,11 +79,10 @@ body
 
 <body class="grad1">
 
-<header>
+
 
  <?php include 'navbar.php' ?>
-</header>
-<div>
+<div id="all">
   <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;padding-top: 20px;">Room Allotment Portal</h2>
 <form  action="room_allot_handler.php"  style="text-align: center;font-family: timesnewroman;padding-top: 20px;" method="POST">
 	
