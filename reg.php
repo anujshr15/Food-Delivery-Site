@@ -4,9 +4,7 @@ $sid=$_POST['sid'];
 $password=$_POST['password'];
 $name=$_POST['name'];
 $phone=$_POST['phone'];
-// $roomno=$_POST['roomno'];
-// $hostelno=$_POST['hostelno'];
-// $roomid="$hostelno"."_"."$roomno";
+
 $con=mysqli_connect('localhost','root');
 if($con){
 mysqli_select_db($con,"Hostel");
@@ -15,7 +13,7 @@ $res=mysqli_multi_query($con,$q);
 
 if($res)
 {
-	echo "response received";
+
 	$_SESSION['sid']=$sid;
 	if(isset($_SESSION['url']))
 	{
@@ -26,11 +24,16 @@ if($res)
 	
 }
 else {
+	echo "<script type=\"text/javascript\">alert('cannot complete registration. Please try again');
+		window.location.href=\"register.php\";
+		</script>";
 
-	echo "cannot complete registration. Please try again";
 }
 }
-else echo "connection not made";
+else 	echo "<script type=\"text/javascript\">alert('cannot complete registration. Please try again');
+		window.location.href=\"register.php\";
+		</script>";
 
 mysqli_close($con);
  ?>
+ 
