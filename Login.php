@@ -24,7 +24,7 @@ body
   background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
 
-div
+#all
 {
 margin: auto;
 width: 30%;
@@ -60,7 +60,7 @@ background-color: lavender;
 <body class="grad1">
 	<?php include 'navbar.php' ?>
 
-    <div>
+    <div id="all">
 	<FORM action="validation.php" method="post" >
 	
 	<h2 style="text-align: center;">LOGIN FORM</h2>

@@ -27,7 +27,7 @@ padding-right: 10px;
 {
   background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
 }
-div
+#all
 {
 
 margin: auto;
@@ -62,7 +62,7 @@ background-color: lavender;
 </head>
 <body class="grad1">
 	<?php include 'navbar.php' ?>
-	<div>
+	<div id="all">
 	<form method="POST" action="reg.php">
         <h2>Registration Form</h2>
 
