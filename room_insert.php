@@ -1,6 +1,6 @@
 
 <?php 
-/*$con=mysqli_connect('localhost','root');
+$con=mysqli_connect('localhost','root');
 mysqli_select_db($con,'hostel');
 for($i=1;$i<=10;$i++)
 {
@@ -12,5 +12,5 @@ for($i=1;$i<=10;$i++)
 	}
 }
 mysqli_close($con);
-*/
+
  ?> 

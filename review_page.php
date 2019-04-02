@@ -102,7 +102,7 @@ form
 <div>
 <h3 ><a style="margin-top: 5px; text-align: center;text-decoration: none; margin-left: 33% ;" href="yourrev.php">View Your Review</a></h3>
 <h2 style="text-align: center;padding-top: 20px;text-decoration: underline;font-family: verdana;">Student Review Portal</h2>
-<form  action="review.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST">
+<form  action="review.php"  style="text-align: center;padding-top: 0px;font-family: timesnewroman;" method="POST" enctype="multipart/form-data">
 
 
 
@@ -113,7 +113,7 @@ form
 <textarea name="rev" rows="12" cols="50">
 </textarea>
 <br><br>
-
+<input type="file" name="uploadfile" value="">
 <input type="submit" class="button">
 <input type="reset" class="button">
 

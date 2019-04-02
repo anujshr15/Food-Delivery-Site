@@ -43,9 +43,9 @@ session_start();
   margin-left: 20% ;
   border-radius: 25px
   font color: red ;
-  background-color: green ;
+  background-color: white ;
   height: 500px ;
-  background-image: url(pen4.jpg) ;
+  /*background-image: url(pen4.jpg) ;*/
   text-decoration-color: red ;
 
 }
@@ -73,7 +73,18 @@ echo $c ; ?>
   
   
   <div class="re">
-	<em><?php 
+    <div class="hey"><h2><?php 
+ $con=mysqli_connect('localhost','root') ;
+mysqli_select_db($con,'hostel') ;
+$a=$_POST["hos"] ;
+$b=$_POST["room"] ;
+$f='_' ;
+$d=$a.$f ;
+$c=$d.$b ;
+echo $c ; ?>
+</h2></div>
+  
+	<div class="pic"><em><?php 
  $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
 $a=$_POST["hos"] ;
@@ -88,7 +99,8 @@ $num=mysqli_num_rows($result) ;
 if($num>=1){
 for($i=1;$i<=$num;$i++){
 	$row=mysqli_fetch_array($result) ;
-	echo "Review id :".$row['rid']."<br>".$row["description"]."<br>By<br>".$row["sid"]."<br><br><br>" ;
+  echo "<img src='".$row['photo']."' width='200'  height='200' ; > ";
+echo "  <br><br><br>Review id :".$row['rid']."<br>".$row["description"]."<br>By<br>".$row["sid"]."<br><br><br>" ;
 }}
 else{
 	echo "No reviews yet<br>" ;
