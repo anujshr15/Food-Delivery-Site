@@ -22,7 +22,7 @@ if($res)
 		$url=$_SESSION['url'];
 		header("Location: $url");
 	}
-	header("Location index.php");
+	header("Location: index.php");
 	
 }
 else {
