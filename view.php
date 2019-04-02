@@ -58,16 +58,7 @@ session_start();
   
 
 
-	<div class="hey"><h2><?php 
- $con=mysqli_connect('localhost','root') ;
-mysqli_select_db($con,'hostel') ;
-$a=$_POST["hos"] ;
-$b=$_POST["room"] ;
-$f='_' ;
-$d=$a.$f ;
-$c=$d.$b ;
-echo $c ; ?>
-</h2></div>
+	
   
   
   <div class="re">
@@ -97,7 +88,7 @@ $num=mysqli_num_rows($result) ;
 if($num>=1){
 for($i=1;$i<=$num;$i++){
 	$row=mysqli_fetch_array($result) ;
-  echo "<img src='".$row['photo']."' width='200'  height='200' ; > ";
+  echo "<p align=center><a href='".$row['photo']."'><img src='".$row['photo']."' width='200'  height='200'  ></a></p>";
 echo "  <br><br><br>Review id :".$row['rid']."<br>".$row["description"]."<br>By<br>".$row["sid"]."<br><br><br>" ;
 }}
 else{
