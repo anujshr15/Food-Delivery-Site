@@ -24,7 +24,7 @@ if($res)
 	
 }
 else {
-	echo "<script type=\"text/javascript\">alert('cannot complete registration. Please try again');
+	echo "<script>alert('cannot complete registration. Please try again');
 		window.location.href=\"register.php\";
 		</script>";
 

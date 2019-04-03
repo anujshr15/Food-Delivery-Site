@@ -69,11 +69,11 @@ background-color: lavender;
         <img src="reg_icon1.png" style="height: 100px;width: 100px;"><br><br>
 
 		Scholar Id:<br>
-		<input type="number" name="sid" placeholder="Enter Scholar Id" class="design"><br><br>
+		<input type="number" required name="sid" placeholder="Enter Scholar Id" class="design"><br><br>
 		Password:<br>
-		<input type="password" name="password" class="design"><br><br>
+		<input type="password" required name="password" class="design"><br><br>
 		Name:<br>
-		<input type="text" name="name" class="design"><br><br>
+		<input type="text" required name="name" class="design"><br><br>
 		Phone:<br>
 		<input type="number" name="phone" class="design"><br><br><br>
 		<!-- Hostel: <select name="hostelno">
