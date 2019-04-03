@@ -9,41 +9,54 @@ session_start();
 	<link type="text/css" rel="stylesheet" href="index.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 
-</style>
+
 </head>
 <body style="background-color: lightcyan;">
 <?php include 'navbar.php' ?>
 <marquee scrollamount="10" direction="right">Welcome to MANIT Hostel Management Site</marquee>
+<div class="row">
 
+<div class="slideshow-container right" style="margin-top: 40px;">
 
-<div class="slideshow-container" style="margin-top: 50px;">
-
-<div class="mySlides fade" >
-  <img src="hostel1.png" style="width:100%;height: 360px;">
+<div class="mySlides fade">
+  <img src="hostel1.png" style="width:100%;height: 400px;">
 </div>
 
 <div class="mySlides fade">
-  <img src="hostel2.png" style="width:100%;height: 360px;">
+  <img src="hostel2.png" style="width:100%;height: 400px;">
 </div>
 
 <div class="mySlides fade">
-  <img src="hostel3.png" style="width:100%;height: 360px;">
+  <img src="hostel3.png" style="width:100%;height: 400px;">
 </div>
 
 <div class="mySlides fade" >
-  <img src="hostel4.png" style="width:100%;height: 360px;">
+  <img src="hostel4.png" style="width:100%;height: 400px;">
 </div>
 
 <div class="mySlides fade" >
-  <img src="hostel5.png" style="width:100%;height: 360px;">
+  <img src="hostel5.png" style="width:100%;height: 400px;">
 </div>
 
 <div class="mySlides fade" >
-  <img src="hostel6.png" style="width:100%;height: 360px;">
+  <img src="hostel6.png" style="width:100%;height: 400px;">
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div class="left sidenav">
+  <a href="about.php">About</a><br><br>
+  <a href="hostel_rules.pdf">Hostel Rules </a><br><br>
+  <a href="hostel_allot_form.pdf">Hostel Allotment Form</a><br><br>
+  <a href="">Facilities</a><br><br>
+  <a href="ragging.php">Anti Ragging/Zero Ragging</a>
+
+  </div>
+
+</div>
 
 </div>
 <br>

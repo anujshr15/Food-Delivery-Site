@@ -11,7 +11,7 @@ footer
   text-align: center;
   color: yellow;
   font-size: 18px;
-  margin-top: 400px;
+  margin-top: 50px;
 }
 </style>
 </head>
