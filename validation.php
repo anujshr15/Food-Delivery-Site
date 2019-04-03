@@ -4,9 +4,9 @@
 	$password=$_POST['password'];
     $con=mysqli_connect('localhost','root');
     mysqli_select_db($con,"Hostel");
-    $q="select * from users where sid='$sid' and password='$password'";
-    $result=mysqli_query($con,$q);
-    $num=mysqli_num_rows($result); 
+    $q="select * from users where sid=$sid and password='$password'";
+    $res=mysqli_query($con,$q);
+    $num=mysqli_num_rows($res); 
     if($num==1)
     {
     	$_SESSION['sid']=$sid;
@@ -27,9 +27,9 @@
     
     }
     else{
-     header("Location: login.php");
+     echo "<script>alert(\"Login not successful! Please try again\");window.location.href=\"login.php\"</script>";
 
     }
 
-    mysql_close($con);
+    mysqli_close($con);
  ?>

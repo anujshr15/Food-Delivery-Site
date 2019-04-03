@@ -69,9 +69,9 @@ background-color: lavender;
     <br>
     
 		Scholar ID:<br>
-        <input type="number" placeholder="Enter Scholar Id" name="sid" style="width: 60%;height: 30px;border-radius: 10px;padding: 10px;"><br><br>
+        <input type="number" required placeholder="Enter Scholar Id" name="sid" style="width: 60%;height: 30px;border-radius: 10px;padding: 10px;"><br><br>
         Password:<br>
-        <input type="password" placeholder="Enter Password" name="password" style="width: 60%;height: 30px;border-radius: 10px;padding: 10px;">
+        <input type="password" required placeholder="Enter Password" name="password" style="width: 60%;height: 30px;border-radius: 10px;padding: 10px;">
         <br><br>
         <input type="submit" align="center" class="button">
     
