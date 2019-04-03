@@ -44,7 +44,7 @@ session_start();
   border-radius: 25px
   font color: red ;
   background-color: white ;
-  height: 500px ;
+  height: 1000px ;
   /*background-image: url(pen4.jpg) ;*/
   text-decoration-color: red ;
 

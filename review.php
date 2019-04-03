@@ -12,7 +12,7 @@ $_SESSION['url']=$_SERVER['REQUEST_URI'];
 $m=$_SESSION['sid'] ;
 $con=mysqli_connect('localhost','root') ;
 mysqli_select_db($con,'hostel') ;
-$n="select * from reviews ,writes_rev where reviews.rid=writes_rev.rid and sid='$m'" ;
+$n="select * from reviews ,writes_rev,student where reviews.rid=writes_rev.rid and student.sid='$m' and student.roomid=reviews.roomid and student.sid=writes_rev.sid" ;
 $result=mysqli_query($con,$n) ;
 $num=mysqli_num_rows($result) ;
 $filename=$_FILES["uploadfile"]["name"] ;
