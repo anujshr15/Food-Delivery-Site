@@ -96,7 +96,7 @@ else{
 }
 ?></em>
 </div>
-
+</div>
  <!-- <footer>@Copyright 2019</footer> -->
 <?php include 'footer.php' ?>
 <!-- <script>
