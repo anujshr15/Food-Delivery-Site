@@ -6,7 +6,17 @@ session_start();
   {
     header("Location: login.php");
   }
-
+  $sid=$_SESSION['sid'];
+  $con=mysqli_connect('localhost','root');
+  mysqli_select_db($con,'hostel');
+  $q="select roomid from student where sid=$sid";
+  $res=mysqli_query($con,$q);
+  $arr=mysqli_fetch_array($res);
+  $r=$arr['roomid'];
+  if($r==NULL)
+  {
+  	echo "<script>alert(\"please allot yourself a room first!\");window.location.href=\"room_allot.php\"</script>";
+  }
 
  ?>
 
