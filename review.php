@@ -50,11 +50,11 @@ $roomno="";
     $ar=mysqli_fetch_array($add);
     $ri=$ar['max(rid)'] ;
     $rid=$ri+1 ;
-
+    if($d||$folder!="photos/"){
     $a="insert into reviews(roomid,description,rid,photo) values('$roomid','$d',$rid,'$folder')" ;
 mysqli_query($con,$a) ;
     $b="insert into writes_rev(rid,sid) values($rid,$m)" ;
-    mysqli_query($con,$b) ;
+    mysqli_query($con,$b) ;}
 
 }
 
@@ -168,15 +168,17 @@ mysqli_select_db($con,'hostel') ;
 $q="select * from student ,reviews,writes_rev where student.sid='$m' and writes_rev.sid=student.sid and reviews.rid=writes_rev.rid";
 $res=mysqli_query($con,$q);
 $arr=mysqli_fetch_array($res);
-
-  echo $arr["roomid"] ;?></h2> </div><em>
+$num=mysqli_num_rows($res) ;
+  echo $arr["roomid"] ;?></h2> </div>
+  <em>
  <?php 
- if(!$arr['photo']||$arr['description']){
- if(!$arr['photo']){
+ if($num>=1){
+ if($arr['photo']!="photos/"||$arr['description']){
+ if($arr['photo']!="photos/"){
    echo "<p align=center><a href='".$arr['photo']."'><img src='".$arr['photo']."' width='200'  height='200' ></a></p> ";}
     
-   
-  echo "<br><br><br>".$arr["description"]."<br>By<br>".$_SESSION['sid']  ;}
+   if($arr["description"]){
+  echo "<br><br><br>".$arr["description"] ;} echo "<br>By<br>".$_SESSION['sid']  ;}}
 
   else
      echo "No reviews yet" ;

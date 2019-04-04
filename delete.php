@@ -53,22 +53,23 @@ $p="delete from writes_rev where sid='$m' " ;
 		body {
 			 background-image: linear-gradient(to right, rgba(255,104,240,.3), rgba(20,180,170,.4));
 		}
+		#grad1 
+{
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
+}
 	</style>
 </head>
-<body>
-	<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-<link rel="stylesheet" type="text/css" href="nav.css">
+<body id="grad1"> 
+<header>
 
-</head>
-<body>
-<header style="text-align: center;">
-<?php include 'navbar.php' ?>
+  <?php include 'navbar.php' ?>
+
 </header>
-</body>
-</html>
+
+
+
+
+
 
 	
 <div class="box">YOUR REVIEW HAS BEEN DELETED!!</div>
