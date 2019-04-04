@@ -19,7 +19,7 @@
 	</div>
 	<div id="normal" class="close">
 
-	<ul   style="list-style-type: none;">
+	<ul   style="list-style-type: none;font-size: 0.95em;">
 		<li><a href="index.php">Home</a></li>
 		<li><a href="dashboard.php">Dashboard</a></li>
 		<li><a class "design" href="room_allot.php">Room Allotment</a></li>
