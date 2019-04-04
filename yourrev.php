@@ -104,12 +104,18 @@ $res=mysqli_query($con,$q);
 $arr=mysqli_fetch_array($res);
 
   echo $arr["roomid"] ;?></h2> </div>
-  <div class="pic"><?php echo "<p><a href='".$arr['photo']."'><img src='".$arr['photo']."' width='200'  height='200' ></a></p> ";?></div>
-    <em>
+ <em> 
+ 	<?php 
+ if(!$arr['photo']||$arr['description']){
+ if(!$arr['photo'])
+   echo "<p align=center><a href='".$arr['photo']."'><img src='".$arr['photo']."' width='200'  height='200' ></a></p> ";
+    
    
-  <br><br><br><?php echo $arr["description"] ; ?><br>By<br><?php  echo $_SESSION['sid']  ; ?><br></em></div>
-  <a href="delete.php" class="btn btn-a">Delete</a>
-  </div>
+  echo "<br><br><br>".$arr["description"]."<br>By<br>".$_SESSION['sid']  ;}
+
+  else
+     echo "No reviews yet" ;
+   ?><br></em></div>
 
     <!-- <footer>@Copyright 2019</footer> -->
 <?php include 'footer.php' ?>

@@ -88,6 +88,7 @@ $num=mysqli_num_rows($result) ;
 if($num>=1){
 for($i=1;$i<=$num;$i++){
 	$row=mysqli_fetch_array($result) ;
+  if(!$row['photo'])
   echo "<p align=center><a href='".$row['photo']."'><img src='".$row['photo']."' width='200'  height='200'  ></a></p>";
 echo "  <br><br><br>Review id :".$row['rid']."<br>".$row["description"]."<br>By<br>".$row["sid"]."<br><br><br>" ;
 }}
