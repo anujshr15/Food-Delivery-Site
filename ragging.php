@@ -18,10 +18,14 @@ font-family: verdana;
 margin-bottom: 400px;
 
 }
+#grad1 
+{
+  background-image: linear-gradient(to right,rgba(60,120,255,.3),rgba(60,120,255,.3),rgba(60,120,255,0.3));
+}
 </style>
 <link rel="stylesheet" type="text/css" href="nav.css">
 </head>
-<body>
+<body id="grad1">
 <?php include 'navbar.php' ?>
 
 <div class="div">
