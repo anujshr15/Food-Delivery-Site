@@ -32,7 +32,7 @@ $arr=mysqli_fetch_array($res);
 $roomid=$arr['roomid'];
 
 $d=$_POST["rev"] ;
-echo $d ;
+
 $roomno="";
     $hostelno="";
     
