@@ -8,6 +8,7 @@
 {
   padding:20px;
   padding-left: 30px;
+
 }
 .row:after 
 {
@@ -33,7 +34,7 @@
 background-color: green;
 width: 30%;
 float: left;
-height: 800px;
+height: 400px;
 margin-top: 40px;
 margin-left: 20px;
 border-style: none;
