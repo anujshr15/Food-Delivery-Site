@@ -41,13 +41,12 @@ $res_checker=mysqli_query($con,$checker);
 $num=mysqli_num_rows($res_checker);
 if($num>=1)
 {
-?>
-<script type="text/javascript">
-	alert("Sorry! room is already alloted");
-</script>
 
-<?php
-header("Location: room_allot.php");
+echo "<script >
+	alert(\"Sorry! room is already alloted\"); window.location.href=\"room_allot.php\";
+</script>";
+
+
 }
 else{
 $q="update student set roomid='$roomid' where sid=$id";
